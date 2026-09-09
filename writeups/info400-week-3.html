@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 3 Exercises — MongoDB® And Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../index.html#coursework">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc">
+    <p class="eyebrow">MongoDB® And Python® &middot; Week 3</p>
+    <h1>Python for Data Science: Week 3 Exercises</h1>
+    <p>The following covers two Python programming exercises involving pandas and NumPy. Exercise 10 focuses on grouping and filtering sales data in a pandas DataFrame, while Exercise 11 demonstrates expanding a salary matrix using NumPy array operations.</p>
+    <h2>Exercise 10: Excluding Total Rows from the DataFrame</h2>
+    <h3>Overview</h3>
+    <p>The goal of this exercise was to merge sales data from multiple tables, compute total sales per order line, group the data by date and region, insert subtotal and grand total rows, and then exclude these summary rows for clean reporting.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Merging DataFrames: Using merge() to join order, detail, employee, and location tables.</li>
+      <li>Calculations: Computing sales totals with Price * Quantity.</li>
+      <li>Aggregation: Grouping by Date and Region with groupby().sum().</li>
+      <li>Subtotals/Grand Totals: Inserting summary rows using pd.concat().</li>
+      <li>Filtering: Using MultiIndex slicing to exclude totals (&#x27;All&#x27; values).</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The solution demonstrates effective use of pandas for multi-source data integration and aggregation. Excluding totals is essential for analysis accuracy. The use of MultiIndex slicing was clean and scalable. Improvements could include error checks for missing or malformed data.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used &quot;Generate Python code to process sales data by merging DataFrames, aggregating totals, adding subtotal/grand total rows, and excluding them with pandas MultiIndex slicing&quot;</p>
+    <p>The result merged and aggregated DataFrames, calculated totals, added summary rows using pd.concat(), and filtered them out with MultiIndex slicing. The final output was accurate; it initially used the deprecated .append() method and lacked inline comments and data validation. The prompt was clear but could be improved by requesting modern practices, explanatory comments, and error handling. Overall, the solution was effective but would benefit from better documentation and adherence to current standards.</p>
+    <h2>Exercise 11: Adding New Rows/Columns to a NumPy Array</h2>
+    <h3>Overview</h3>
+    <p>This task involved expanding the 2D salary matrix by adding more months (columns) and new employees (rows), reflecting changes over time using NumPy functions.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Adding Columns: Using np.concatenate() and np.column_stack() to add new monthly salary data.</li>
+      <li>Adding Rows: Using np.append() to introduce new employees.</li>
+      <li>Salary Adjustment: Simulating 5% raises for new months.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The result, a 6×6 salary matrix, demonstrates correct use of vectorized operations for time-based expansion. Rounding floating-point results could enhance realism. The approach scales well and mirrors real HR/payroll scenarios.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used “Extend a NumPy array of salaries with two new columns and one new row using np.concatenate() and np.append().&quot;</p>
+    <p>The result used NumPy to create a salary array and successfully built a 6×6 matrix with simulated raises by using functions like concatenate(), column_stack(), and append(). Initially, forgetting to include the axis parameter in append() led to a shape error, but this was fixed later. While the floating-point results were accurate, they weren&#x27;t rounded, which makes them less practical for real-world use. The prompt could be clearer by specifying the expected shape of the array, the type of data needed, and steps for checking the results.</p>
+    <p>References</p>
+    <p>NumPy quickstart — NumPy v2.2 Manual. (n.d.). https://numpy.org/doc/stable/user/quickstart.html</p>
+    <p>pandas documentation — pandas 2.2.3 documentation. (n.d.). https://pandas.pydata.org/docs/</p>
+    <p>Pythondatabook. (n.d.). GitHub - pythondatabook/sources. GitHub. https://github.com/pythondatabook/sources/tree/main</p>
+    <p>Vasiliev, Y. (2022). Python for data Science: A Hands-On Introduction. No Starch Press.</p>
+    <p>What’s new in 1.4.0 (January 22, 2022) — pandas 2.2.3 documentation. (n.d.). https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.4.0.html#deprecations</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

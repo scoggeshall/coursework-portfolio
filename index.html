@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sean Coggeshall — Information Technology Coursework Portfolio</title>
+<meta name="description" content="Information Technology coursework from American Public University System: Python, Flask microservices, pandas and scikit-learn analysis, front-end development, systems design, and application security.">
+<meta name="author" content="Sean Coggeshall">
+<meta property="og:title" content="Sean Coggeshall — IT Coursework Portfolio">
+<meta property="og:description" content="Thirty courses of Information Technology work across two degrees, including front-end projects that run in the browser.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="#top">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#featured">Featured</a>
+            <a href="#demos">Live Demos</a>
+            <a href="#coursework">Coursework</a>
+            <a href="#certifications">Certifications</a>
+            <a href="writeups/index.html">Write-Ups</a>
+            <a href="#skills">Skills</a>
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch between light and dark theme">◐</button>
+    </div>
+</header>
+
+<main id="main">
+<div id="top"></div>
+
+<!-- ================================================================ hero -->
+<div class="wrap">
+    <section class="hero" style="border: 0;">
+        <div>
+            <p class="eyebrow">American Public University System</p>
+            <h1>Two Degrees Of Information Technology Coursework</h1>
+            <p class="concentration">Concentration: Programming Full Stack/Python&reg; Visualization</p>
+            <p class="lede">
+                Twenty-nine courses across an Associate's and a Bachelor's degree. Source code,
+                design documents, system diagrams, and six front-end projects that run
+                in the browser.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#featured">See Featured Work</a>
+                <a class="btn btn-ghost" href="#demos">Open A Live Demo</a>
+            </div>
+        </div>
+
+        <div class="term">
+            <div class="term-bar">
+                <i></i><i></i><i></i>
+                <span class="term-name">WK8_Final_Project.py</span>
+            </div>
+<pre><span class="c"># Florida Housing Analysis and Prediction</span>
+<span class="k">from</span> sklearn.linear_model <span class="k">import</span> <span class="f">LinearRegression</span>
+<span class="k">from</span> sklearn.metrics <span class="k">import</span> mean_squared_error, r2_score
+
+<span class="c"># reshape wide&rarr;long, one row per county-month</span>
+long = pd.<span class="f">melt</span>(df, id_vars=id_cols,
+               var_name=<span class="s">'Date'</span>, value_name=<span class="s">'ZHVI'</span>)
+
+<span class="k">for</span> county <span class="k">in</span> counties:
+    <span class="c"># 12-month lag features per county</span>
+    <span class="k">for</span> lag <span class="k">in</span> <span class="f">range</span>(<span class="n">1</span>, <span class="n">13</span>):
+        cdf[<span class="s">f'lag_{lag}'</span>] = cdf[<span class="s">'ZHVI'</span>].<span class="f">shift</span>(lag)
+
+    model = <span class="f">LinearRegression</span>().<span class="f">fit</span>(X_train, y_train)
+    results[county] = <span class="f">r2_score</span>(y_test, preds)</pre>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div><strong>29</strong><span>Courses</span></div>
+        <div><strong>2</strong><span>Degrees</span></div>
+        <div><strong>170+</strong><span>Source Files</span></div>
+        <div><strong>6</strong><span>Live Demos</span></div>
+    </div>
+</div>
+
+<!-- ============================================================ featured -->
+<div class="wrap">
+<section id="featured">
+    <div class="section-head">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Featured Projects</h2>
+        <p>The seven projects with the most depth behind them.</p>
+    </div>
+
+    <div class="featured">
+
+        <!-- 1. INFO400 final -->
+        <article class="project">
+            <div class="project-head">
+                <h3>Florida Housing Analysis And Prediction</h3>
+                <span class="code-chip">INFO400</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Loads Zillow Home Value Index data for every Florida county, reshapes
+                        the wide monthly columns into a tidy time series, and filters to
+                        2018&ndash;2023. For each county it builds twelve monthly lag features,
+                        trains a linear regression model, and scores actual versus predicted
+                        home values.
+                    </p>
+                    <p>
+                        Output is a per-county set of trend plots, actual-vs-predicted charts,
+                        and evaluation metrics. Counties with fewer than 24 observations are
+                        skipped rather than trained on insufficient data.
+                    </p>
+                    <ul class="tags">
+                        <li>pandas</li><li>NumPy</li><li>scikit-learn</li>
+                        <li>seaborn</li><li>matplotlib</li><li>Regression</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn" data-src="MongoDB-and-Python-INFO400/Final_Project/WK8_Final_Project.py">View Source</a>
+                        <a class="link-btn" data-src="MongoDB-and-Python-INFO400/Final_Project/data/fl.csv">Dataset</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">pipeline</span></div>
+<pre><span class="c"># load &amp; filter to county-level records</span>
+df = df[df[<span class="s">'RegionType'</span>].str.<span class="f">lower</span>() == <span class="s">'county'</span>]
+
+<span class="c"># drop rows the model cannot use</span>
+long.<span class="f">dropna</span>(subset=[<span class="s">'Date'</span>, <span class="s">'ZHVI'</span>], inplace=<span class="k">True</span>)
+long = long[(long[<span class="s">'Date'</span>] &gt;= <span class="s">'2018-01-01'</span>) &amp;
+            (long[<span class="s">'Date'</span>] &lt;= <span class="s">'2023-12-31'</span>)]
+
+<span class="k">if</span> cdf[<span class="s">'ZHVI'</span>].size &lt; <span class="n">24</span>:
+    <span class="c"># too little data to train/predict</span>
+    <span class="k">continue</span></pre>
+                    </div>
+                    <div class="readout">
+                        <div><b>67</b><span>FL Counties</span></div>
+                        <div><b>72 mo</b><span>Time Series</span></div>
+                        <div><b>12</b><span>Lag Features</span></div>
+                        <div><b>MSE / R²</b><span>Scored On</span></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. ENTD320 microservices -->
+        <article class="project">
+            <div class="project-head">
+                <h3>Flask Calculator: From One Route To Two Microservices</h3>
+                <span class="code-chip">ENTD320</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Week 1 is a Flask app that returns a greeting. By week 7 the same
+                        calculator has become two independent services — a JSON arithmetic API
+                        and a second service — sharing one SQLite database and writing every
+                        calculation to a common history table.
+                    </p>
+                    <p>
+                        Along the way: an encapsulated <code>Use_Calculator</code> class with private
+                        methods, RESTful URL routes, Jinja2 templates with form handling, database
+                        persistence with a history page, and a <code>unittest</code> suite
+                        covering every operation.
+                    </p>
+                    <ul class="tags">
+                        <li>Flask</li><li>Jinja2</li><li>REST</li><li>SQLite</li>
+                        <li>unittest</li><li>Microservices</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn" data-src="Intermediate-Python-Programming-ENTD320/Assignments/WK7/server1.py">Service 1</a>
+                        <a class="link-btn" data-src="Intermediate-Python-Programming-ENTD320/Assignments/WK7/server2.py">Service 2</a>
+                        <a class="link-btn" data-src="Intermediate-Python-Programming-ENTD320/Assignments">All Weeks</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">server1.py</span></div>
+<pre><span class="c"># Microservice 1: Basic Calculator API</span>
+app = <span class="f">Flask</span>(__name__)
+
+cursor.<span class="f">execute</span>(<span class="s">'''
+CREATE TABLE IF NOT EXISTS calculations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_number  REAL NOT NULL,
+    second_number REAL NOT NULL,
+    operation     TEXT NOT NULL,
+    result        TEXT NOT NULL,
+    timestamp     TEXT NOT NULL,
+    service       TEXT NOT NULL
+)'''</span>)
+
+<span class="k">class</span> <span class="f">BasicCalculator</span>:
+    <span class="s">"""Class for basic arithmetic operations."""</span></pre>
+                    </div>
+                    <div class="readout">
+                        <div><b>7 wks</b><span>Iterations</span></div>
+                        <div><b>2</b><span>Services</span></div>
+                        <div><b>1</b><span>Shared DB</span></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3. WEBD221 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>The Evolution Of Video Games</h3>
+                <span class="code-chip">WEBD221</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        A four-page site built up one week at a time — semantic structure first,
+                        then a stylesheet, then imagery, then JavaScript behaviour, then a
+                        validated submission form. Each week was kept as its own folder, so the
+                        earlier stages are still in the repo alongside the final build.
+                    </p>
+                    <p>
+                        Three content pages — an overview, a console-wars history, and a personal
+                        favourites list — plus the game submission form, sharing a stylesheet and
+                        a console image set.
+                    </p>
+                    <ul class="tags">
+                        <li>HTML5</li><li>CSS</li><li>JavaScript</li><li>Forms</li><li>Responsive</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="Intermediate-Web-Development-WEBD221/Assignments/WK7_Assignment/index.html">Open Site</a>
+                        <a class="link-btn" data-src="Intermediate-Web-Development-WEBD221/Assignments">Source</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">week over week</span></div>
+<pre><span class="c">WK1–3  </span>standalone pages, styles1–3.css
+<span class="c">WK4    </span>index + console-wars + favorite-games
+<span class="c">WK5    </span>+ images/ &amp; script.js
+<span class="c">WK6    </span>+ game-form.html, unified styles.css
+<span class="c">WK7    </span>final pass &mdash; <span class="f">the site as submitted</span></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. WEBD241 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>JavaScript Final Project</h3>
+                <span class="code-chip">WEBD241</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Seven JavaScript assignments — array sorting, an athlete image gallery,
+                        a student information form with validation — collected into one site
+                        behind a jQuery drop-down menu.
+                    </p>
+                    <p>
+                        The final project is the entry point; each assignment remains reachable
+                        from the menu as its own page.
+                    </p>
+                    <ul class="tags">
+                        <li>JavaScript</li><li>DOM</li><li>Validation</li><li>jQuery</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="WebDev-Using-JavaScript-WEBD241/FinalProject/FinalProject.html">Open Final Project</a>
+                        <a class="link-btn" data-src="WebDev-Using-JavaScript-WEBD241">Source</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">FinalProject.html</span></div>
+<pre><span class="c">&lt;!-- one menu, seven assignments --&gt;</span>
+&lt;<span class="k">ul</span> <span class="f">id</span>=<span class="s">"menu"</span>&gt;
+  &lt;<span class="k">li</span>&gt;&lt;<span class="k">a</span> <span class="f">href</span>=<span class="s">"Assignment1.html"</span>&gt;Assignment 1&lt;/<span class="k">a</span>&gt;&lt;/<span class="k">li</span>&gt;
+  &lt;<span class="k">li</span>&gt;&lt;<span class="k">a</span> <span class="f">href</span>=<span class="s">"Assignment2.html"</span>&gt;Assignment 2&lt;/<span class="k">a</span>&gt;&lt;/<span class="k">li</span>&gt;
+  <span class="c">...</span>
+&lt;/<span class="k">ul</span>&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. WEBD343 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>jQuery Interaction Set</h3>
+                <span class="code-chip">WEBD343</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Four jQuery builds across the term: DOM manipulation basics, a
+                        hand-rolled accordion, an image slider with timed transitions, and a
+                        final accordion packaged as a reusable jQuery plugin
+                        (<code>accordion.jquery.js</code>) rather than inline script.
+                    </p>
+                    <p>
+                        The content is local — the beaches from Jacksonville down to
+                        St. Augustine — so the pages use real copy rather than placeholder text.
+                    </p>
+                    <ul class="tags">
+                        <li>jQuery</li><li>Plugin Authoring</li><li>DOM</li><li>Animation</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="jQuery-WEBD343/Assignments/WK8/index.html">Open Final Project</a>
+                        <a class="link-btn" data-src="jQuery-WEBD343/Assignments">Source</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">accordion.jquery.js</span></div>
+<pre><span class="c">// packaged as a reusable plugin, not inline script</span>
+$.<span class="f">fn</span>.accordion = <span class="k">function</span>(options) {
+    <span class="k">return</span> <span class="k">this</span>.<span class="f">each</span>(<span class="k">function</span>() {
+        <span class="c">// bind headings, collapse siblings, animate</span>
+    });
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. WEBD300 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>Coggs Web Craft</h3>
+                <span class="code-chip">WEBD300</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        A user-interface course taken as a design-system exercise. The landing
+                        page is the finished build; behind it sits a template family — default,
+                        blog, and portfolio — delivered three times over with dedicated
+                        desktop, tablet, and mobile stylesheets.
+                    </p>
+                    <p>
+                        The breakpoint variants live in
+                        <code>WK8_Templates/</code>, one folder per device class.
+                    </p>
+                    <ul class="tags">
+                        <li>UI Design</li><li>Responsive Layout</li><li>Templates</li><li>CSS</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="User-Interface-Design-WEBD300/index.html">Open Project</a>
+                        <a class="link-btn" data-src="User-Interface-Design-WEBD300">Source</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="term">
+                        <div class="term-bar"><i></i><i></i><i></i><span class="term-name">WK8_Templates/</span></div>
+<pre><span class="c">Desktop/</span>   default · blog · portfolio + desktop-styles.css
+<span class="c">Tablets/</span>   default · blog · portfolio + tablets-styles.css
+<span class="c">Mobile/ </span>   default · blog · portfolio + mobile-styles.css
+
+<span class="c"># same markup, three stylesheets</span></pre>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 7. ENTD268 + INFO498 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>Information System Design Documents</h3>
+                <span class="code-chip">ENTD268</span>
+            </div>
+            <div class="project-body single">
+                <div>
+                    <p>
+                        A complete analysis-and-design pass on one system, carried from a planning
+                        vision through an SRS with use cases, data flow diagrams at two levels, a
+                        UML model, an ERD, a system architecture, a structure chart, and finally an
+                        SDD with test cases. The diagrams below are the source
+                        <code>.drawio</code> files exported to PNG.
+                    </p>
+                    <ul class="tags">
+                        <li>SRS</li><li>SDD</li><li>DFD</li><li>UML</li><li>ERD</li>
+                        <li>Use Cases</li><li>draw.io</li>
+                    </ul>
+                    <div class="gallery">
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/ContextDFD.png" alt="Context-level data flow diagram" loading="lazy">
+                            <figcaption>Context DFD</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/DFD0.png" alt="Level 0 data flow diagram" loading="lazy">
+                            <figcaption>DFD Level 0</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/erd.png" alt="Entity relationship diagram" loading="lazy">
+                            <figcaption>ERD</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/UML.png" alt="UML class diagram" loading="lazy">
+                            <figcaption>UML</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/Structure_Chart.png" alt="Structure chart" loading="lazy">
+                            <figcaption>Structure Chart</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/WK4_System_Architecture.png" alt="System architecture diagram" loading="lazy">
+                            <figcaption>System Architecture</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Systems-Design-ENTD268/mockup.png" alt="Interface mockup" loading="lazy">
+                            <figcaption>Interface Mockup</figcaption>
+                        </figure>
+                    </div>
+                    <div class="actions">
+                        <a class="link-btn" data-src="Information-Systems-Design-ENTD268">Source</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 8. INFO498 -->
+        <article class="project">
+            <div class="project-head">
+                <h3>Information Technology: Capstone</h3>
+                <span class="code-chip">INFO498</span>
+            </div>
+            <div class="project-body single">
+                <div>
+                    <p>
+                        The degree's closing project: a point-of-sale system specified end to end.
+                        Network topology, screen layout, project schedule, and a costed build —
+                        the planning and design deliverables rather than source code.
+                    </p>
+                    <ul class="tags">
+                        <li>Requirements</li><li>Network Design</li><li>Project Planning</li>
+                        <li>Cost Analysis</li><li>Gantt</li>
+                    </ul>
+                    <div class="gallery">
+                        <figure>
+                            <img src="Information-Technology-Capstone-INFO498/Network.png" alt="Network topology diagram" loading="lazy">
+                            <figcaption>Network Topology</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Technology-Capstone-INFO498/POS_ScreenLayout.png" alt="Point of sale screen layout" loading="lazy">
+                            <figcaption>POS Screen Layout</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Technology-Capstone-INFO498/gnatt.png" alt="Project Gantt chart" loading="lazy">
+                            <figcaption>Project Schedule</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="Information-Technology-Capstone-INFO498/CostBreakDown.png" alt="Cost breakdown" loading="lazy">
+                            <figcaption>Cost Breakdown</figcaption>
+                        </figure>
+                    </div>
+                    <div class="actions">
+                        <a class="link-btn" data-src="Information-Technology-Capstone-INFO498">Source</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- =============================================================== demos -->
+<section id="demos">
+    <div class="section-head">
+        <p class="eyebrow">Runnable</p>
+        <h2>Live Demos</h2>
+        <p>Front-end projects served as they were submitted. No build step, no server.</p>
+    </div>
+    <div class="demo-grid" data-demo-grid></div>
+</section>
+
+<!-- ========================================================== coursework -->
+<section id="coursework">
+    <div class="section-head">
+        <p class="eyebrow">All Courses</p>
+        <h2>Coursework</h2>
+        <p>Every course across both degrees. Filter by discipline, or by the courses
+           with a running demo.</p>
+    </div>
+
+    <div class="filters" data-filters role="group" aria-label="Filter coursework"></div>
+    <p class="course-count" data-count></p>
+    <div class="course-grid" data-course-grid></div>
+</section>
+
+<!-- ====================================================== certifications -->
+<section id="certifications">
+    <div class="section-head">
+        <p class="eyebrow">Credentials</p>
+        <h2>Certifications</h2>
+        <p>Industry certifications earned alongside the degree work.</p>
+    </div>
+    <div class="cert-grid">
+
+        <article class="cert">
+            <p class="cert-issuer">CompTIA</p>
+            <h3>Security+</h3>
+            <p class="cert-meta">Earned September 2024</p>
+            <p class="cert-status active">Valid Through September 2027</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">CompTIA</p>
+            <h3>Network+</h3>
+            <p class="cert-meta">Earned January 2023</p>
+            <p class="cert-status active">Active &mdash; Renewed Via Security+ Continuing Education</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">Extreme Networks</p>
+            <h3>Extreme Certified Professional In ExtremeWireless Cloud</h3>
+            <p class="cert-meta">Earned January 2026</p>
+            <p class="cert-status active">Valid Through January 2029</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">Microsoft</p>
+            <h3>Microsoft Certified: Azure Fundamentals</h3>
+            <p class="cert-meta">Earned August 2024</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">Microsoft</p>
+            <h3>Microsoft 365 Certified: Fundamentals</h3>
+            <p class="cert-meta">Earned August 2024</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">freeCodeCamp</p>
+            <h3>Responsive Web Design</h3>
+            <p class="cert-meta">Earned August 2024</p>
+            <p class="cert-status">Approximately 300 Hours</p>
+        </article>
+
+        <article class="cert">
+            <p class="cert-issuer">LinkedIn Learning</p>
+            <h3>Software Development Fundamentals</h3>
+            <p class="cert-meta">Earned July 2024</p>
+            <p class="cert-status">Approximately 21 Hours</p>
+        </article>
+
+    </div>
+</section>
+
+<!-- ============================================================== skills -->
+<section id="skills">
+    <div class="section-head">
+        <p class="eyebrow">Summary</p>
+        <h2>Skills Demonstrated</h2>
+    </div>
+    <div class="skill-grid">
+        <div class="skill">
+            <span class="num">01</span>
+            <h3>Python</h3>
+            <p>Input validation, functions and modules, custom libraries, classes with
+               inheritance, exception handling, and unit testing across four Python courses.</p>
+        </div>
+        <div class="skill">
+            <span class="num">02</span>
+            <h3>Web Applications</h3>
+            <p>Flask routing, Jinja2 templating, form handling, JSON APIs, SQLite
+               persistence, and splitting one app into cooperating services.</p>
+        </div>
+        <div class="skill">
+            <span class="num">03</span>
+            <h3>Front-End Development</h3>
+            <p>Semantic HTML, responsive CSS across three breakpoints, vanilla JavaScript,
+               and jQuery through to authoring a reusable plugin.</p>
+        </div>
+        <div class="skill">
+            <span class="num">04</span>
+            <h3>Data Analysis</h3>
+            <p>pandas reshaping and joins, NumPy arrays, matplotlib and seaborn charts,
+               Cartopy mapping, geospatial work with Shapely and Geopy, and Apriori
+               association rules.</p>
+        </div>
+        <div class="skill">
+            <span class="num">05</span>
+            <h3>Machine Learning</h3>
+            <p>Linear and logistic regression, lag-feature engineering, train/test splits,
+               bag-of-words sentiment classification, and MSE / R² evaluation.</p>
+        </div>
+        <div class="skill">
+            <span class="num">06</span>
+            <h3>Databases</h3>
+            <p>SQL joins and schema design, SQLite, MySQL via connector, and MongoDB
+               document work with PyMongo.</p>
+        </div>
+        <div class="skill">
+            <span class="num">07</span>
+            <h3>Systems Analysis And Design</h3>
+            <p>Requirements specifications, use cases, data flow diagrams, UML, ERDs,
+               structure charts, and design documents with test cases.</p>
+        </div>
+        <div class="skill">
+            <span class="num">08</span>
+            <h3>Security</h3>
+            <p>Application security labs against the OWASP testing guide, database
+               hardening and access control, and surveillance and privacy ethics.</p>
+        </div>
+    </div>
+</section>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <p>Information Technology coursework · American Public University System</p>
+        <p class="note">Static site — no framework, no build step.</p>
+    </div>
+</footer>
+
+</body>
+</html>

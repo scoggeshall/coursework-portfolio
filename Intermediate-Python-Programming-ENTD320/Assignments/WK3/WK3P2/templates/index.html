@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Restful Flask Calculator</title>
+</head>
+<body>
+    <h2>My Restful Flask Calculator:</h2>
+    <form action="/calculate" method="post">
+        <pre>
+First Number     <input type="number" name="first_number" required>
+Second Number    <input type="number" name="second_number" required>
+Total            <input type="text" name="result" readonly value="{{ result if result is defined and result is string else '' }}">
+        </pre>
+        <!-- Buttons for each operation -->
+        <button type="submit" name="operation" value="add"> + </button>
+        <button type="submit" name="operation" value="sub"> - </button>
+        <button type="submit" name="operation" value="mult"> * </button>
+        <button type="submit" name="operation" value="div"> / </button>
+        <button type="submit" name="operation" value="allInOneDict">allInOneDict</button>
+        <button type="submit" name="operation" value="allInOneList">allInOneList</button>
+    </form>
+
+    <!-- Show error messages -->
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <!-- Display allInOneDict results properly -->
+    {% if operation == "allInOneDict" and result is mapping %}
+    <h3>All Operations (Dictionary Format)</h3>
+    <ul>
+        {% for key, value in result.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Display allInOneList results properly -->
+    {% if operation == "allInOneList" and result is sequence %}
+    <h3>All Operations (List Format)</h3>
+    <ul>
+        <li><strong>Addition:</strong> {{ result[0] }}</li>
+        <li><strong>Subtraction:</strong> {{ result[1] }}</li>
+        <li><strong>Multiplication:</strong> {{ result[2] }}</li>
+        <li><strong>Division:</strong> {{ result[3] }}</li>
+    </ul>
+    {% endif %}
+</body>
+</html>

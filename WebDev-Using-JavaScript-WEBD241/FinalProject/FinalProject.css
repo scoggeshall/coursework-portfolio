@@ -1,0 +1,63 @@
+html {
+	background-color: #E6CCB3;
+}	
+	
+h1 {
+	text-align: center;
+}	
+
+h2 {
+	text-align: center;
+	
+}	
+
+#menu
+{	margin: 0;
+	padding: 0;
+	text-align: center;}
+
+	#menu li
+	{	list-style: none;
+		font: 12px Tahoma, Arial;
+		text-align: center;
+		display: inline-block}
+
+	#menu li a
+	{	display: inline-block;
+		background: #324143;
+		padding: 5px 12px;
+		text-decoration: none;
+		border-right: 1px solid white;
+		/* Sized to content so all eight items sit on one row. A fixed 120px
+		   made the row 1160px wide, which wrapped on most screens. The
+		   drop-down rule below keeps its own fixed width. */
+		width: auto;
+		min-width: 92px;
+		text-align: center;
+		color: #EAFFED;
+		white-space: nowrap}
+
+	#menu li a:hover
+	{	background: #24313C}
+		
+		#menu li ul
+		{	margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			border-top: 1px solid white}
+		
+			#menu li ul li
+			{	float: none;
+				display: block}
+			
+			#menu li ul li a
+			{	width: 120px;
+				background: #A9C251;
+				color: #24313C}
+			
+			#menu li ul li a:hover
+			{	background: #8EA344}
+
+	
+	

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation History</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculation History</h2>
+    
+    {% if calculations %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Number</th>
+                    <th>Second Number</th>
+                    <th>Operation</th>
+                    <th>Result</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for calc in calculations %}
+                <tr>
+                    <td>{{ calc['id'] }}</td>
+                    <td>{{ calc['first_number'] }}</td>
+                    <td>{{ calc['second_number'] }}</td>
+                    <td>{{ calc['operation'] }}</td>
+                    <td>{{ calc['result'] }}</td>
+                    <td>{{ calc['timestamp'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No calculations found in the database.</p>
+    {% endif %}
+    
+    <br>
+    <a href="/form"><button>Back to Calculator</button></a>
+    <a href="/"><button>Home</button></a>
+</body>
+</html>

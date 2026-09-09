@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gardening App</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Gardening App</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Plants</a></li>
+				<li><a href="#">Certification</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Welcome to the Gardening App</h2>
+			<p>Here you can track what plants you have in your garden, learn about native plants in Florida, and work towards becoming certified as a Monarch Watch Waystation.</p>
+			<a href="#">Get Started</a>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Gardening App | Created by Your Name</p>
+	</footer>
+</body>
+</html>

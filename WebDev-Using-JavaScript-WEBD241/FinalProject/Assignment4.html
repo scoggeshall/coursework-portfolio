@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="Assignment4.css">
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
+<title>Assignment 4</title>
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+
+<ul id="menu">
+	<li><a href="#">Home</a>
+		<ul>
+			<li><a href="FinalProject.html">Home</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 1</a>
+		<ul>
+			<li><a href="Assignment1.html">Assignment 1</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 2</a>
+		<ul>
+			<li><a href="Assignment2.html">Assignment 2</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 3</a>
+		<ul>
+			<li><a href="Assignment3.html">Assignment 3</a></li>
+		</ul>
+	<li><a href="#">Assignment 4</a>
+		<ul>
+			<li><a href="Assignment4.html">Assignment 4</a></li>
+		</ul>
+	<li><a href="#">Assignment 5</a>
+		<ul>
+			<li><a href="Assignment5.html">Assignment 5</a></li>
+		</ul>
+	<li><a href="#">Assignment 6</a>
+		<ul>
+			<li><a href="Assignment6.html">Assignment 6</a></li>
+		</ul>
+	<li><a href="#">Assignment 7</a>
+		<ul>
+			<li><a href="Assignment7.html">Assignment 7</a></li>
+		</ul>
+	</li>
+</ul>
+
+<div id="content">
+    <h2>Sorted Fruits:</h2>
+    <ul id="fruitList"></ul>
+    <h4 id="dateInfo">Today is the </h4>
+</div>
+
+<script>
+
+<!--
+
+    let fruitArray = ["Mango", "Apple", "Banana", "Orange", "Strawberry"];
+
+    fruitArray.sort();
+
+    let fruitList = document.getElementById("fruitList");
+    fruitArray.forEach(fruit => {
+        let listItem = document.createElement("li");
+        listItem.textContent = fruit;
+        fruitList.appendChild(listItem);
+    });
+
+    let today = new Date();
+
+    let monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let myYear = today.getFullYear();
+    let myDate = today.getDate();
+    let dayOfWeek = weekdays[today.getDay()];
+    let dayExt = "th";
+
+    if (myDate == 1 || myDate == 21 || myDate == 31) dayExt = "st";
+    else if (myDate == 2 || myDate == 22) dayExt = "nd";
+    else if (myDate == 3 || myDate == 23) dayExt = "rd";
+
+    let extDate = myDate + dayExt;
+
+    let dateInfo = document.getElementById("dateInfo");
+    dateInfo.textContent = `Today is ${dayOfWeek}, the ${extDate} day of ${monthName[today.getMonth()]} in the year ${myYear}.`;
+
+//-->
+
+</script>
+
+</body>
+</html>

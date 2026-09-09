@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="POS Interface Mockup" id="pos-interface">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pos-container" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#343a40;" parent="1" vertex="1">
+          <mxGeometry x="60" y="80" width="320" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="pos-header" value="Club IT POS" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=16;fillColor=#e9ecef;strokeColor=#495057;" parent="1" vertex="1">
+          <mxGeometry x="80" y="100" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="menu-section" value="Menu Items" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#dee2e6;strokeColor=#6c757d;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="80" y="160" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pizza-item" value="Pizza" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#ced4da;" parent="1" vertex="1">
+          <mxGeometry x="100" y="185" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="burger-item" value="Burger" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#ced4da;" parent="1" vertex="1">
+          <mxGeometry x="180" y="185" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="salad-item" value="Salad" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#ced4da;" parent="1" vertex="1">
+          <mxGeometry x="260" y="185" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="modifiers-section" value="Modifiers" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#dee2e6;strokeColor=#6c757d;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="80" y="280" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="no-onions" value="No Onions" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#ced4da;" parent="1" vertex="1">
+          <mxGeometry x="100" y="305" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="extra-cheese" value="Extra Cheese" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#ffffff;strokeColor=#ced4da;" parent="1" vertex="1">
+          <mxGeometry x="200" y="305" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cart-section" value="Cart" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#dee2e6;strokeColor=#6c757d;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="80" y="380" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cart-pizza" value="Pizza x2" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="100" y="405" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cart-salad" value="Salad x1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="100" y="425" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtotal" value="Subtotal: $28" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="445" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-button" value="PAY" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#28a745;strokeColor=#1e7e34;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="520" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kitchen-container" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#f8f9fa;strokeColor=#343a40;" parent="1" vertex="1">
+          <mxGeometry x="500" y="80" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="kitchen-header" value="Kitchen Display" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=16;fillColor=#e9ecef;strokeColor=#495057;" parent="1" vertex="1">
+          <mxGeometry x="520" y="100" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="queue-section" value="Live Order Queue" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;fillColor=#dee2e6;strokeColor=#6c757d;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+          <mxGeometry x="520" y="160" width="280" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="order-1" value="Table 5 – Pizza x2" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fff3cd;strokeColor=#ffeaa7;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="540" y="190" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="order-2" value="Table 3 – Salad x1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fff3cd;strokeColor=#ffeaa7;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="540" y="230" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sync-arrow" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#007bff;dashed=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="540" as="sourcePoint" />
+            <mxPoint x="500" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sync-label" value="Real-time Order Sync" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2;fontColor=#007bff;" parent="1" vertex="1">
+          <mxGeometry x="390" y="380" width="120" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

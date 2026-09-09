@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Week 4 Calculator Template</title>
+</head>
+<body>
+    <h2>Week 4: Restful Calculator with Templating</h2>
+    <form action="/calculate" method="POST">
+        <pre>
+First Num      <input type="text" name="fnum" value="{{ result.fnum }}" required />
+Second Num     <input type="text" name="snum" value="{{ result.snum }}" required />
+Result         <input type="text" name="rslt" value="{{ retres }}" readonly />
+<input type="hidden" name="hid" value="{{ result.hid }}" />
+        </pre>
+        <input type="button" value="add" onclick="this.form.hid.value='add'; this.form.submit()" />
+        <input type="button" value="sub" onclick="this.form.hid.value='sub'; this.form.submit()" />
+        <input type="button" value="mult" onclick="this.form.hid.value='mult'; this.form.submit()" />
+        <input type="button" value="div" onclick="this.form.hid.value='div'; this.form.submit()" />
+        <input type="button" value="allInOneDict" onclick="this.form.hid.value='allInOneDict'; this.form.submit()" />
+        <input type="button" value="allInOneList" onclick="this.form.hid.value='allInOneList'; this.form.submit()" />
+    </form>
+</body>
+</html>

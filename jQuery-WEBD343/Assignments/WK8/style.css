@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+#accordion {
+  width: 600px;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#accordion h2 {
+  margin: 0;
+  padding: 14px 18px;
+  background: #e9ecef;
+  cursor: pointer;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+#accordion h2:hover {
+  background: #dcdfe3;
+}
+
+#accordion p {
+  margin: 0;
+  padding: 14px 18px;
+  background: #f8f9fa;
+  line-height: 1.6;
+  border-bottom: 1px solid #eee;
+}
+
+#accordion p:last-of-type {
+  border-bottom: none;
+}

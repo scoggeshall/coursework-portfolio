@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assignment 7</title>
+<link rel="stylesheet" type="text/css" href="Assignment7.css">
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+
+<script>
+    var myColor = prompt("Please enter a hexadecimal color code (must be 6 characters, including 0 thru 9 and A thru F):", "FFFFFF");
+    var myAge = prompt("Please enter your age:", "25");
+
+    if ((myColor == null) || (myColor == "") || (myColor.length !== 6)) {
+        myColor = "FFFFFF";
+    }
+
+    document.cookie = "userSettings=" + "YColor=" + myColor + " " + "age=" + myAge + ";expires=20-May-2030;";
+
+    alert("A cookie has been set on your system.");
+
+    var start = document.cookie.indexOf("YColor=");
+    if (start != -1) {
+        start = start + 7;
+        var pos = "#" + document.cookie.substr(start, 6);
+        document.bgColor = pos;
+        alert("Your background color will be: " + pos);
+    } else {
+        alert("No valid color found in the cookie.");
+    }
+
+    var ageStart = document.cookie.indexOf("age=");
+    if (ageStart != -1) {
+        ageStart = ageStart + 4;
+        var userAge = document.cookie.substr(ageStart, 25);
+        alert("Your age is: " + userAge);
+    } else {
+        alert("No valid age found in the cookie.");
+    }
+
+    document.write("Your background color is: " + document.bgColor + "<br>");
+    document.write("Your age is: " + window.userAge + "<br>");
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python For Data Science: Week 1 Exercises — MongoDB® And Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../index.html#coursework">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc">
+    <p class="eyebrow">MongoDB® And Python® &middot; Week 1</p>
+    <h1>Python For Data Science: Week 1 Exercises</h1>
+    <p>This report documents the four Python exercises from Python for data Science: A Hands-On Introduction Vasiliev (2022). The exercises include</p>
+    <h2>Exercise 1: Improved Photo Tag Analysis</h2>
+    <h3>Problem Description</h3>
+    <p>This exercise involves categorizing images based on shared metadata tags. Given a set of images with associated descriptive tags, the objective is to identify and organize photos with common characteristics using sets and dictionaries.</p>
+    <h3>Solution Approach</h3>
+    <ul>
+      <li>The script iterates through all pairs of images to identify shared tags.</li>
+      <li>A dictionary stores grouped images under keys formed by intersecting tags.</li>
+      <li>The setdefault() method checks that only relevant image pairs are added without redundancy.</li>
+    </ul>
+    <h3>Results and Analysis</h3>
+    <p>The script categorized images based on shared tags for a metadata classification. This method is used in image classification, metadata organization, and content-based image retrieval. Using sets for tag comparison improves lookup speed and minimizes redundant operations (Vasiliev, 2022).</p>
+    <h2>Exercise 2: Using NumPy Statistical Functions</h2>
+    <h3>Problem Description</h3>
+    <p>This uses NumPy’s numerical for processing employee salary and bonus data. The script calculates:</p>
+    <ul>
+      <li>Total salaries (base salary + bonus).</li>
+      <li>Maximum salary per month.</li>
+      <li>Highest recorded salary.</li>
+      <li>Average of max salaries per month.</li>
+    </ul>
+    <h3>Solution Approach</h3>
+    <ul>
+      <li>Uses NumPy arrays for efficient numerical processing.</li>
+      <li>Performs calculations using built-in NumPy functions such as amax and average.</li>
+    </ul>
+    <h3>Results and Analysis</h3>
+    <p>NumPy simplifies array operations, making salary computations more efficient. This enhances payroll management, financial forecasting, and statistical data analysis. NumPy&#x27;s optimized array operations outperform traditional list-based computations (NumPy quickstart, n.d.).</p>
+    <h2>Exercise 3: Combining Three Series</h2>
+    <h3>Problem Description</h3>
+    <p>This exercise focuses on merging three Pandas Series representing employee names, emails, and phone numbers into a single structured DataFrame.</p>
+    <h3>Solution Approach</h3>
+    <ul>
+      <li>Creates three separate Pandas Series for names, emails, and phone numbers.</li>
+      <li>Uses the concat() function to merge these Series into a single DataFrame.</li>
+    </ul>
+    <h3>Results and Analysis</h3>
+    <p>The final DataFrame consolidates multiple employee attributes, making data retrieval more structured and efficient. This method is useful for HR databases, CRM systems, and structured contact management. Using Pandas for data merging simplifies relational data handling.</p>
+    <h2>Exercise 4: Using Different Joins</h2>
+    <h3>Problem Description</h3>
+    <p>This exercise uses merging datasets (employee details and salaries) using inner and outer joins in Pandas.</p>
+    <h3>Solution Approach</h3>
+    <ul>
+      <li>Loads employee and salary data into Pandas DataFrames.</li>
+      <li>Performs inner joins (including only matching records) and outer joins (preserving unmatched records).</li>
+      <li>Uses concat() instead of the deprecated .append() method for efficiency.</li>
+    </ul>
+    <h3>Results and Analysis</h3>
+    <p>The script merged datasets, demonstrating how different join operations influence data integration.</p>
+    <ul>
+      <li>Inner joins retain only matching records between datasets.</li>
+      <li>Outer joins preserve all records, even those missing corresponding salary or job details.</li>
+    </ul>
+    <p>This exercise shows Pandas&#x27; usefulness in managing structured datasets, making it best for HR databases, payroll processing, and ERP systems.</p>
+    <h2>Evaluation of AI Assistance</h2>
+    <h3>Usefulness and Accuracy</h3>
+    <p>ChatGPT assisted by:</p>
+    <ul>
+      <li>Identifying deprecated methods.</li>
+      <li>Suggesting new data manipulation techniques using sets and dictionaries.</li>
+      <li>Checked for best practices in NumPy and Pandas computations.</li>
+    </ul>
+    <h3>Limitations and Challenges</h3>
+    <p>Despite its usefulness, AI had some limitations:</p>
+    <ul>
+      <li>Initial responses sometimes contained syntax errors (e.g., using .append() in Pandas 2.0).</li>
+      <li>AI-generated solutions occasionally went off topic from exercise requirements, requiring manual adjustments.</li>
+    </ul>
+    <h3>Best Practices for AI-Assisted Coding</h3>
+    <p>To maximize AI’s effectiveness:</p>
+    <ul>
+      <li>Manually verify AI-generated code for correctness.</li>
+      <li>Request simplified explanations to avoid unnecessary complexity.</li>
+      <li>Use AI iteratively, refining responses through follow-up questions.</li>
+    </ul>
+    <p>References</p>
+    <p>Vasiliev, Y. (2022). Python for data Science: A Hands-On Introduction. No Starch Press.</p>
+    <p>Pythondatabook. (n.d.). GitHub - pythondatabook/sources. GitHub. https://github.com/pythondatabook/sources/tree/main</p>
+    <p>NumPy quickstart — NumPy v2.2 Manual. (n.d.). https://numpy.org/doc/stable/user/quickstart.html</p>
+    <p>pandas documentation — pandas 2.2.3 documentation. (n.d.). https://pandas.pydata.org/docs/</p>
+    <p>ChatGPT. (n.d.). https://chatgpt.com/</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

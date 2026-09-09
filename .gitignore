@@ -1,0 +1,101 @@
+# ---------------------------------------------------------------------------
+# This repo stages coursework copied from the local Associates/ and Bachelors/
+# folders. Those folders contain a lot of material that is NOT Sean's own work
+# and should not be published: publisher slide decks, textbook chapters,
+# journal article PDFs, lecture audio, graded report cards, and syllabi.
+#
+# They stay on disk locally; they just never reach GitHub. Five of them also
+# exceed GitHub's hard 100 MB per-file limit and would cause an outright
+# push rejection.
+# ---------------------------------------------------------------------------
+
+# --- Third-party course material (copyright) -------------------------------
+Articles/
+Book/
+*.epub
+*.acsm
+
+# Publisher chapter slide decks (Ch01.ppt ... Ch12.ppt). Sean's own
+# presentations are .pptx and are deliberately NOT ignored.
+[Cc]h[0-9]*.ppt
+
+# Textbooks and vendor guides shipped with the courses
+Information Systems for Business and Beyond.pdf
+design-website-bottom-up.pdf
+sqlite-sample-database-diagram.pdf
+Additional Guidance to Support Your Coding.pdf
+Undergraduate Forum Rubric*.docx
+Lists and Matrices*.pptx
+Ch0*_1_*.pdf
+Flow_Chart_Symbols_Reminder.PNG
+
+# --- Institutional / personal records --------------------------------------
+Report Card*
+*Syllabus*
+*syllabus*
+course.pdf
+nov.pdf
+Registration*/
+*Registration Confirmation*
+*COE.pdf
+Monthly Enrollment*
+
+# --- Oversized media (exceeds or approaches GitHub limits) -----------------
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+*.m4a
+
+# --- Redundant archives of files already present unzipped ------------------
+*.zip
+
+# --- Large third-party datasets --------------------------------------------
+# Kaggle inputs for the INFO400 assignments. The analysis code is the
+# deliverable; re-download these locally to run WK6/WK7.
+Reviews.csv
+Online_Retail.csv
+
+# --- Editor / tool cruft ---------------------------------------------------
+.$*.bkp
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+*.db
+.DS_Store
+New Microsoft *
+
+# --- Remaining third-party readings outside Articles/ ----------------------
+Lab1_Files/
+An_Exploratory_Investigation_*.pdf
+Basic-Outlines.pdf
+FCS Case Study.pdf
+Change Management.pdf
+Communication Styles.pdf
+GVT.pdf
+Human Relations.pdf
+Week 3 Database Exercise SQLitev2.pdf
+schedule.pdf
+
+# --- Instructor-supplied templates and grading handouts --------------------
+SDD Template*.docx
+SRS Template*.docx
+Information-Technology-Capstone-INFO498/Templates/
+WRITING AND APA Checklist*
+*grading checklist*
+Lab2_Files/
+
+# Local preview helper
+.claude/
+
+# Instructor teaching examples bundled with the ENTD220 lectures.
+# intro_to_python_notes.py stays tracked — that one is authored work.
+Intro-to-Python/ENTD220/Lib_fun/
+Intro-to-Python/ENTD220/lib_class/
+Intro-to-Python/ENTD220/scalc/
+
+# Superseded first attempt at the intro Python course; ENTD220 is the
+# completed version and the one shown on the site.
+Intro-to-Python/Associates/

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Week 7 Calculator Microservices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin: 2px;
+        }
+        input[type="button"] {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #2980b9;
+        }
+        .service-info {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Week 7: Calculator Microservices</h2>
+    
+    <div class="service-info">
+        <p><strong>Current Configuration:</strong></p>
+        <ul>
+            <li>Service 1 (Basic Operations): Running on port 5001</li>
+            <li>Service 2 (Advanced Operations): Running on port 5002</li>
+        </ul>
+    </div>
+    
+    <form action="/calculate" method="POST">
+        <pre>
+First Num      <input type="text" name="fnum" value="{{ result.fnum }}" required />
+Second Num     <input type="text" name="snum" value="{{ result.snum }}" required />
+Result         <input type="text" name="rslt" value="{{ retres }}" readonly style="width: 400px;" />
+<input type="hidden" name="hid" value="{{ result.hid }}" />
+<input type="hidden" name="last_operation" value="{{ last_operation|default('') }}" />
+        </pre>
+        
+        <div>
+            <strong>Basic Operations (Service 1):</strong>
+            <br>
+            <input type="button" value="add" onclick="this.form.hid.value='add'; this.form.last_operation.value='add'; this.form.submit()" />
+            <input type="button" value="sub" onclick="this.form.hid.value='sub'; this.form.last_operation.value='sub'; this.form.submit()" />
+            <input type="button" value="mult" onclick="this.form.hid.value='mul'; this.form.last_operation.value='mul'; this.form.submit()" />
+            <input type="button" value="div" onclick="this.form.hid.value='div'; this.form.last_operation.value='div'; this.form.submit()" />
+        </div>
+        
+        <div style="margin-top: 10px;">
+            <strong>Advanced Operations (Service 2):</strong>
+            <br>
+            <input type="button" value="allInOneDict" onclick="this.form.hid.value='allInOneDict'; this.form.last_operation.value='allInOneDict'; this.form.submit()" />
+            <input type="button" value="allInOneList" onclick="this.form.hid.value='allInOneList'; this.form.last_operation.value='allInOneList'; this.form.submit()" />
+        </div>
+        
+        <br>
+        <!-- Database operations -->
+        <input type="button" value="Save Calculation" onclick="this.form.hid.value='save'; this.form.submit()" />
+        <a href="/history"><input type="button" value="View History" /></a>
+        <a href="/"><input type="button" value="Home" /></a>
+    </form>
+</body>
+</html>

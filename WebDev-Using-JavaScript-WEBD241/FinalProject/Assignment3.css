@@ -1,0 +1,63 @@
+html {
+	background-color: #FFE6FF;
+}	
+	
+h1 {
+	text-align: center;
+}	
+
+#menu
+{	margin: 0;
+	padding: 0;
+	text-align: center;}
+
+	#menu li
+	{	list-style: none;
+		font: 12px Tahoma, Arial;
+		text-align: center;
+		display: inline-block}
+
+	#menu li a
+	{	display: inline-block;
+		background: #324143;
+		padding: 5px 12px;
+		text-decoration: none;
+		border-right: 1px solid white;
+		width: 120px;
+		color: #EAFFED;
+		white-space: nowrap}
+
+	#menu li a:hover
+	{	background: #24313C}
+		
+		#menu li ul
+		{	margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			border-top: 1px solid white}
+		
+			#menu li ul li
+			{	float: none;
+				display: block}
+			
+			#menu li ul li a
+			{	width: 120px;
+				background: #A9C251;
+				color: #24313C}
+			
+			#menu li ul li a:hover
+			{	background: #8EA344}
+	
+/* Page content is centered to match the heading and the navigation bar. */
+body {
+	text-align: center;
+}
+
+/* Lists stay left-aligned internally so the bullets line up, but the list
+   itself sits centered on the page. */
+ul:not(#menu) {
+	display: table;
+	margin: 0 auto;
+	text-align: left;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sean Coggeshall">
+    <meta name="keywords" content="video games, gaming history, arcade games, consoles, evolution of games">
+    <meta name="description" content="An exploration of the history and future of video games.">
+    <link rel="stylesheet" href="style_assignment5.css"> 
+    <title>The Evolution of Video Games</title>
+</head>
+<body>
+
+<header id="site-header">
+    <h1>The Evolution of Video Games</h1>
+    <p>Video Games have a rich history that has affected the world both culturally and pushing technological advancements. From the beginning of video games in the 1950’s, to the gaming industry we have today it has been used by people to relax and enjoy some downtime, compete professionally, and connect with friends all over the world.</p>
+</header>
+
+<nav id="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="console-wars.html">Console Wars</a></li>
+        <li><a href="favorite-games.html">My Favorite Games</a></li>
+    </ul>
+</nav>
+
+<main id="site-main">
+    <section id="beginnings">
+        <h2>The Beginning of Video Games</h2>
+        <article>
+            <h3>1950s Origins</h3>
+            <p>Video Games trace all the way back to the 1950s. One of the first games to be recognized was “<a href="https://en.wikipedia.org/wiki/Tennis_for_Two" target="_blank">Tennis for Two</a>” created by <a href="https://en.wikipedia.org/wiki/William_Higinbotham" target="_blank">William Higinbotham</a> in 1958. It was put on display in the Brookhaven National Laboratory, showcasing the potential of technology in the entertainment industry.</p>
+        </article>
+        
+        <article>
+            <h3>1970s to Early 1980s</h3>
+            <p>For me, when I hear <a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank">Pac-Man</a> I think of <a href="https://www.google.com/doodles/30th-anniversary-of-pac-man" target="_blank">Google Pac-Man</a> which made its debut in 2010, it was created by <a href="https://en.wikipedia.org/wiki/Marcin_Wichary" target="_blank">Marcin Wichary</a> to celebrate Pac-Man's 30th anniversary. The original came out in 1980 and became the first video game character to become globally recognized. The game was created by Namco and its success showed that video games could become mainstream and have cultural and economic influence.</p>
+        </article>
+    </section>
+   
+    <section id="golden-age">
+        <h2>The Golden Age of Gaming</h2>
+        <article>
+            <h3>Arcade Boom</h3>
+            <p>The late 70s and early 80s marked what is now known as the Golden Age of Gaming. Games like “<a href="https://en.wikipedia.org/wiki/Space_Invaders" target="_blank">Space Invaders</a>” in 1978 and other classics like “<a href="https://en.wikipedia.org/wiki/Galaga" target="_blank">Galaga</a>” and “<a href="https://en.wikipedia.org/wiki/Donkey_Kong_(video_game)" target="_blank">Donkey Kong</a>” created huge cultural phenomena. In 1983 the gaming industry crashed which marked the end of the Golden age. This was largely due to a saturated console market, personal computer competition, and competition with third-party publishing rights.</p>
+            <img src="images/vintage-arcade-games.jpg" alt="Vintage arcade games" width="500">
+            <p><small>Image source: <a href="https://medium.com/timeline/golden-age-video-arcades-940a177ccb30" target="_blank">The Golden Age of Video Arcades</a> on Medium</small></p>
+        </article>
+
+        <article>
+            <h3>Nintendo</h3>
+            <p>The <a href="https://en.wikipedia.org/wiki/Nintendo_Entertainment_System" target="_blank">Nintendo Entertainment System (NES)</a> came out in 1985 and helped the industry come back after the crash in 1983. The NES brought new quality games like “<a href="https://en.wikipedia.org/wiki/Super_Mario_Bros." target="_blank">Super Mario Bros</a>” and “<a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda" target="_blank">The Legend of Zelda</a>” which attracted a large audience back to the gaming industry.</p>
+            
+            <p>Arcades became social hubs for friends to meet up and compete with one another in their favorite games. And home consoles like <a href="https://en.wikipedia.org/wiki/Atari_2600" target="_blank">Atari 2600</a> brought your favorite games into your own home.</p>
+        </article>
+    </section>
+    
+    <aside id="gaming-fact">
+        <h2>Did You Know?</h2>
+        <p id="fact"></p>
+        <button id="new-fact">Show Another Fact</button>
+    </aside>
+
+    <section id="future">
+        <h2>The Future of Gaming</h2>
+            <p>The future of gaming has great potential. As new technologies are being introduced like Virtual Reality (VR), 3D experiences, and cloud gaming being available over streams, it seems limitless what games can be explored.</p>
+            <img src="images/vr-headset.jpg" alt="VR headset" width="500">
+            <p><small>Image source: <a href="https://www.nytimes.com/wirecutter/reviews/best-standalone-vr-headset/" target="_blank">The Best VR Headset</a> on The New York Times Wirecutter</small></p>
+            
+            <p>There are concerns over some cloud gaming as the game ownership can be taken away from the player. If a provider no longer hosts a game, you won’t be able to play it. This can come with both good and bad; it's less expensive to rent a game, but you never really own it. VR has not really reached its full potential, but as new technologies continue to emerge, it could expand rapidly before we know it.</p>
+    </section>
+</main>
+
+<footer id="site-footer">
+    <p>Sean Coggeshall | Intermediate Web Development WEBD221</p>
+</footer>
+
+<!-- JavaScript for Random Video Game Fact Generator -->
+<script>
+    const facts = [
+        "The first video game was created in 1958.",
+        "Mario was originally called 'Jumpman.'",
+        "The PlayStation was initially a Nintendo project.",
+        "In 'Pac-Man', the ghosts' movements are not random; each has its own strategy.",
+        "The best-selling video game console of all time is the PlayStation 2.",
+        "The world's largest arcade machine is over 14 feet tall and is fully playable.",
+        "The most expensive game ever developed is 'Grand Theft Auto V', costing over $265 million.",
+        "The highest-grossing arcade game of all time is 'Space Invaders'.",
+        "Sonic the Hedgehog's shoes were inspired by Michael Jackson's boots.",
+        "The 'Easter egg' term in gaming originated from the hidden message in 'Adventure' for the Atari 2600."
+    ];
+
+    function displayRandomFact() {
+        const fact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById('fact').innerText = fact;
+    }
+
+    document.getElementById('new-fact').addEventListener('click', displayRandomFact);
+
+    // Display a random fact when the page loads
+    window.onload = displayRandomFact;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sean Coggeshall">
+    <meta name="keywords" content="video games, gaming history, console wars, Sega, Nintendo, PlayStation, Xbox">
+    <meta name="description" content="An exploration of the Console Wars and the modern era of gaming.">
+    <link rel="stylesheet" href="style_assignment5.css">
+    <title>The Console Wars and The Modern Era</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+<header id="site-header">
+    <h1>The Console Wars and The Modern Era</h1>
+    <p>Discover how intense competition between gaming companies shaped the industry and led to the modern era of gaming.</p>
+</header>
+
+<nav id="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="console-wars.html">Console Wars</a></li>
+        <li><a href="favorite-games.html">My Favorite Games</a></li>
+    </ul>
+</nav>
+
+<main id="site-main">
+    <section id="90s-console-wars">
+        <h2>90s Console Wars</h2>
+        <article>
+            <h3>Nintendo vs. Sega</h3>
+            <p>An intense rivalry between Nintendo and Sega in the 90s shaped the future of gaming. The <a href="https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System" target="_blank">Super Nintendo Entertainment System (SNES)</a> and <a href="https://en.wikipedia.org/wiki/Sega_Genesis" target="_blank">Sega Genesis</a> competed with exclusive titles and groundbreaking franchises like "<a href="https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(1991_video_game)" target="_blank">Sonic the Hedgehog</a>" and "<a href="https://en.wikipedia.org/wiki/Super_Mario" target="_blank">Super Mario</a>." Aggressive marketing campaigns aimed to build brand loyalty, and this competition pushed each company to innovate both console compute power and game quality.</p>
+        </article>
+    </section>
+    
+    <section id="2000s-advancements">
+        <h2>2000s Advancements</h2>
+        <article>
+            <h3>PlayStation and Xbox Era</h3>
+            <p>The 2000s saw significant advancements in gaming, including the success of the <a href="https://en.wikipedia.org/wiki/PlayStation_2" target="_blank">PlayStation 2</a> as the best-selling console, and Microsoft's entry into the market with the <a href="https://en.wikipedia.org/wiki/Xbox_(console)" target="_blank">Xbox</a> and the revolutionary <a href="https://en.wikipedia.org/wiki/Xbox_Live" target="_blank">Xbox Live</a> online service.</p>
+            <img src="images/xbox-and-playstation.jpg" alt="Xbox and PlayStation" width="500">
+            <p><small>Image source: <a href="https://forum.xboxera.com/t/xbox-caught-up-with-playstation/6493" target="_blank">XboxEra</a></small></p>
+            <p>The Xbox 360 and PlayStation 3 further pushed the boundaries, bringing high-definition graphics, downloadable content, and multiplayer gaming to the mainstream. These advancements solidified video games as a major entertainment medium, attracting a broader audience and paving the way for future innovations in interactive and connected gaming experiences.</p>
+        </article>
+    </section>
+
+    <section id="online-gaming">
+        <h2>The Rise of Online Gaming</h2>
+        <article>
+            <h3>Social Connections</h3>
+            <p>The online features are still a great way to connect with friends. You can start a chat with friends on <a href="https://discord.com/" target="_blank">Discord</a>, <a href="https://www.xbox.com/en-US/live" target="_blank">Xbox Live</a>, or <a href="https://www.playstation.com/en-us/ps-plus/" target="_blank">PlayStation Network (PSN)</a> to enhance your gaming experience.</p>
+            <p>Online multiplayer games like "<a href="https://en.wikipedia.org/wiki/Halo_3" target="_blank">Halo 3</a>" and "<a href="https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_2" target="_blank">Call of Duty: Modern Warfare 2</a>" became cultural phenomena, emphasizing the importance of social interaction in gaming.</p>
+        </article>
+    </section>
+
+<!-- Drag and Drop Interactive Section -->
+<section id="drag-and-drop">
+    <h2>Arrange the Consoles Chronologically</h2>
+    <p>Drag the gaming consoles below into the drop zone in the order they were released. Then click "Check Order" to see if you're correct!</p>
+    <p>Drop consoles below in chronological order!</p>
+
+    <div id="drag-container">
+        <img src="images/ps1.png" id="drag3" draggable="true" ondragstart="drag(event)" alt="PlayStation 1">
+        <img src="images/atari2600.png" id="drag1" draggable="true" ondragstart="drag(event)" alt="Atari 2600">
+        <img src="images/nes.png" id="drag2" draggable="true" ondragstart="drag(event)" alt="Nintendo Entertainment System">
+        <img src="images/wii.png" id="drag5" draggable="true" ondragstart="drag(event)" alt="Wii">
+        <img src="images/xbox.png" id="drag4" draggable="true" ondragstart="drag(event)" alt="Xbox">
+    </div>
+    
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    
+    <button id="check-order">Check Order</button>
+    <button id="reset">Reset</button>
+    <p id="feedback"></p>
+</section>
+
+
+    <!-- Aside Element -->
+    <aside id="console-fact">
+        <h2>Did You Know?</h2>
+        <p>The PlayStation 2 is the best-selling console of all time, with over 155 million units sold worldwide.</p>
+    </aside>
+</main>
+
+<footer id="site-footer">
+    <p>Sean Coggeshall | Intermediate Web Development WEBD221</p>
+</footer>
+
+</body>
+</html>

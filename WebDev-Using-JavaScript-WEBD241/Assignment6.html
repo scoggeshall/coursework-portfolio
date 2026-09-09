@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Assignment 6</title>
+<link rel="stylesheet" type="text/css" href="Assignment6.css">
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+<hr>
+<script>
+    function validateForm() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+		var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        var subject = document.getElementById('subject').value;
+		
+
+        if (firstName.length < 1) {
+            alert("Please enter your first name.");
+            return false;
+        }
+
+        if (lastName.length < 1) {
+                alert("Please enter your last name.");
+                return false;
+        }
+
+        if (email.length < 1) {
+                alert("Please enter your student email address.");
+                return false;
+        }
+		
+	    if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        if (subject === "") {
+                alert("Please choose your favorite subject.");
+                return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+     }
+</script>
+
+    <h2 class="center">Student Information Form</h2>
+    <form id="studentForm" name="studentForm" action="submit.html" class="center">
+        <p>
+            First Name: <br>
+            <input type="text" id="firstName" name="firstName">
+        </p>
+        <p>
+            Last Name: <br>
+            <input type="text" id="lastName" name="lastName">
+        </p>
+        <p>
+            Student Email Address: <br>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+            Favorite Subject: <br>
+            <select id="subject" name="subject">
+                <option value="">--Select a subject--</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="English">English</option>
+                <option value="Art">Art</option>
+            </select>
+        </p>
+        <input type="button" value="Submit" onclick="return validateForm();">
+        <input type="reset" value="Reset Form">
+	</form>
+</body>
+</html>

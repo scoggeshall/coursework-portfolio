@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 5 Exercises — MongoDB® And Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../index.html#coursework">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc">
+    <p class="eyebrow">MongoDB® And Python® &middot; Week 5</p>
+    <h1>Python for Data Science: Week 5 Exercises</h1>
+    <p>The following document provides a detailed explanation, analysis, and evaluation of</p>
+    <h2>Exercise 14: Defining Two or More Polygons</h2>
+    <h3>Overview</h3>
+    <p>Exercise 14 involves using Shapely to define multiple polygons representing adjacent urban areas. The goal is to identify which polygon contains a pick-up location and find the closest cab within that polygon.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Spatial data analysis using Shapely.</li>
+      <li>Defining polygons from coordinate lists.</li>
+      <li>Determining spatial relationships with .within() method.</li>
+      <li>Calculating geographic distances using geopy.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The script identifies which polygon contains the pick-up location and determines distances from available cabs within that polygon. It correctly calculates distances and identifies the closest cab based on geographic coordinates.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used &quot; Implement spatial grouping of cabs using multiple urban zones and calculate closest distance.”</p>
+    <p>The result provided correctly structured polygons but misapplied coordinate ordering (longitude vs. latitude). After refinement, the solution properly used Shapely’s .within() for spatial containment checks and geopy’s geodesic distance calculations. The AI’s strength lay in structuring zone-based logic, but manual corrections were required to ensure accurate geographic calculations.</p>
+    <h2>Exercise 15: Further Improving the Pick-Up Algorithm</h2>
+    <h3>Overview</h3>
+    <p>Exercise 15 improves upon the previous algorithm by calculating distances for multiple cabs, considering whether they are inside or outside the polygon, and factoring an entry point (like a bridge) into the calculation.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Enhanced spatial decision-making.</li>
+      <li>Conditional logic to differentiate cab positions.</li>
+      <li>Geospatial computations using geopy.distance.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The updated algorithm accurately considers both direct and indirect (via entry point) distances. It identifies the closest cab among those provided and clearly outputs the distances calculated.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used “Calculate cab distances with entry point routing for geographic barriers.&quot;</p>
+    <p>The generated code proposed straight-line distance comparisons, ignoring real-world routing constraints. The revised solution incorporated conditional pathfinding through a bridge entry point.</p>
+    <h2>Exercise 16: Filtering Data with a List Comprehension</h2>
+    <h3>Overview</h3>
+    <p>Exercise 16 demonstrates creating a concise list comprehension to filter data without using pandas. The goal is to identify cabs currently unavailable based on their status.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Python list comprehension for efficient data filtering.</li>
+      <li>Avoiding external dependencies like pandas.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The resulting list accurately identified cabs with &quot;open&quot; status, effectively filtering the unavailable cabs from the given dataset.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used “Filter orders to unavailable cabs using Pythonic syntax.&quot;</p>
+    <p>The generated list comprehension ([x[2] for x in orders if x[1] == &#x27;open&#x27;]) was functionally correct but initially used ambiguous tuple indices (x[2]). The refined solution added explicit tuple unpacking for readability</p>
+    <h2>Exercise 17: Adding More Metrics to Analyze Dependencies</h2>
+    <h3>Overview</h3>
+    <p>Exercise 17 analyzes stock data to explore relationships between price changes, volume changes, and other calculated metrics. It introduces additional columns for deeper analytical insights, such as rolling sums and price trends.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Time series analysis using pandas.</li>
+      <li>Calculating percentage changes and rolling sums.</li>
+      <li>Assessing correlation between multiple financial metrics.</li>
+      <li>Data-driven financial forecasting insights.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The metrics provided deeper insights into the correlation between stock price volatility and trading volume. The rolling sum (volumeSum) and nextVolume demonstrated clear predictive potential regarding future trading volume behavior.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used “Expand stock analysis with volatility and volume correlation metrics.&quot;</p>
+    <p>The generated code included basic rolling averages but lacked financial analysis standards like logarithmic returns.</p>
+    <p>References</p>
+    <p>Geopy Project Team. (2023). Geopy documentation (Version 2.3) [Computer software]. https://geopy.readthedocs.io/en/stable/</p>
+    <p>Gillies, S., Van der Wal, T., &amp; Other contributors. (2023). Shapely documentation (Version 2.0). https://shapely.readthedocs.io/en/stable/manual.html</p>
+    <p>NumPy Developers. (2023). NumPy reference guide (Version 1.24). https://numpy.org/doc/stable/reference/</p>
+    <p>McKinney, W. (2022). Python for data analysis (3rd ed.). O&#x27;Reilly Media.</p>
+    <p>pythondatabook. (n.d.). Sources [Code repository]. GitHub. Retrieved March 30, 2025, from https://github.com/pythondatabook/sources/tree/main</p>
+    <p>Vasiliev, Y., Barbeau, B., &amp; McCart, J. (2022). Python for data science: A hands-on introduction. No Starch Press.</p>
+    <p>Yahoo Finance. (2023). yfinance documentation (Version 0.2.18). https://pypi.org/project/yfinance/</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="Assignment5.css">
+<title>Assignment 5</title>
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+
+<script>
+
+var numslides=0,currentslide=0;
+var slides = new Array();
+function StartSlideShow() {
+   imgs=document.getElementsByTagName("img");
+   for (i=0; i<imgs.length; i++) {
+      if (imgs[i].className != "slide") continue;
+      slides[numslides]=imgs[i];
+      if (numslides==0) {
+         imgs[i].style.display="block";
+      } else {
+         imgs[i].style.display="none";
+      }
+      imgs[i].onclick=NextSlide;
+      numslides++;
+   }
+}
+function NextSlide() {
+   slides[currentslide].style.display="none";
+   currentslide++;
+   if (currentslide >= numslides) currentslide = 0;
+   slides[currentslide].style.display="block";
+}
+window.onload=StartSlideShow;
+</script>
+
+<h1>Favorite Olympians Slideshow</h1>
+<img class="slide" src="dream.jpg" width="400" height="300" alt="USA Dream Team">  
+<img class="slide" src="phelps.jpg" width="400" height="300" alt="Michael Phelps">
+<img class="slide" src="bolt.jpg" width="400" height="300" alt="Usain Bolt">
+<img class="slide" src="simone.jpg" width="400" height="300" alt="Simone Biles">
+<img class="slide" src="burroughs.jpg" width="400" height="300" alt="Jordan Burroughs">
+<img class="slide" src="white.jpg" width="400" height="300" alt="Shaun White">
+<p>Click the image to advance the slides.</p>
+
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="Assignment2.css">
+<title>Assignment 2</title>
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+<script>
+var userName = prompt("What is your name?");
+document.write("Welcome, " + userName + ".");
+</script>
+<p>Click here to take our Quiz:
+<input type="button" value="Take Quiz" onclick="takeTest();">
+</p>
+<script>
+var numCorrect = 0;
+
+function takeTest() {
+  var points = 0;
+
+  var question1 = "Which data type allows a sequence of alphanumeric characters written in quotes (either single or double quotes)?";
+  var answer1 = "string";
+
+  var question2 = "Using JavaScript operator precedence, what is the result of the following expression? 3 + 3 * 5";
+  var answer2 = 18;
+
+  var question3 = "A variable name can start with the * symbol (type 'true' or 'false')?";
+  var answer3 = 'false';
+
+  var response;
+
+  response = prompt(question1, "");
+  if (response) points = runningTotal((response.toLowerCase() === answer1.toLowerCase()) ? 1 : 0);
+
+  response = prompt(question2, "");
+  if (response) points = runningTotal((parseInt(response) === answer2) ? 1 : 0);
+
+  response = prompt(question3, "");
+  if (response) points = runningTotal((response.toLowerCase() === answer3.toLowerCase()) ? 1 : 0);
+  alert("You answered a total of " + points + " correctly.");
+
+  numCorrect = 0;
+  points = 0;
+}
+
+function runningTotal(i) {
+  numCorrect += i; 
+  return numCorrect;
+}
+</script>
+
+</body>
+</html>

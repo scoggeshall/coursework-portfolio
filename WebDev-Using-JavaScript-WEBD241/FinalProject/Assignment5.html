@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="Assignment5.css">
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
+<title>Assignment 5</title>
+</head>
+<body>
+<h1>Sean Coggeshall</h1>
+
+<ul id="menu">
+	<li><a href="#">Home</a>
+		<ul>
+			<li><a href="FinalProject.html">Home</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 1</a>
+		<ul>
+			<li><a href="Assignment1.html">Assignment 1</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 2</a>
+		<ul>
+			<li><a href="Assignment2.html">Assignment 2</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Assignment 3</a>
+		<ul>
+			<li><a href="Assignment3.html">Assignment 3</a></li>
+		</ul>
+	<li><a href="#">Assignment 4</a>
+		<ul>
+			<li><a href="Assignment4.html">Assignment 4</a></li>
+		</ul>
+	<li><a href="#">Assignment 5</a>
+		<ul>
+			<li><a href="Assignment5.html">Assignment 5</a></li>
+		</ul>
+	<li><a href="#">Assignment 6</a>
+		<ul>
+			<li><a href="Assignment6.html">Assignment 6</a></li>
+		</ul>
+	<li><a href="#">Assignment 7</a>
+		<ul>
+			<li><a href="Assignment7.html">Assignment 7</a></li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+
+var numslides=0,currentslide=0;
+var slides = new Array();
+function StartSlideShow() {
+   imgs=document.getElementsByTagName("img");
+   for (i=0; i<imgs.length; i++) {
+      if (imgs[i].className != "slide") continue;
+      slides[numslides]=imgs[i];
+      if (numslides==0) {
+         imgs[i].style.display="block";
+      } else {
+         imgs[i].style.display="none";
+      }
+      imgs[i].onclick=NextSlide;
+      numslides++;
+   }
+}
+function NextSlide() {
+   slides[currentslide].style.display="none";
+   currentslide++;
+   if (currentslide >= numslides) currentslide = 0;
+   slides[currentslide].style.display="block";
+}
+window.onload=StartSlideShow;
+</script>
+
+<div class="container">
+<h1>Favorite Olympians Slideshow</h1>
+<img class="slide" src="dream.jpg" width="400" height="300" alt="USA Dream Team">  
+<img class="slide" src="phelps.jpg" width="400" height="300" alt="Michael Phelps">
+<img class="slide" src="bolt.jpg" width="400" height="300" alt="Usain Bolt">
+<img class="slide" src="simone.jpg" width="400" height="300" alt="Simone Biles">
+<img class="slide" src="burroughs.jpg" width="400" height="300" alt="Jordan Burroughs">
+<img class="slide" src="white.jpg" width="400" height="300" alt="Shaun White">
+<p>Click the image to advance the slides.</p>
+</div>
+
+</body>
+</html>
+
