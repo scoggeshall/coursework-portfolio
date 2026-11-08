@@ -1,0 +1,57 @@
+[
+  {
+    "id": "link-neighbor",
+    "title": "Link Neighbor",
+    "summary": "Identify the directly visible Ethernet neighbor without guessing the upstream path.",
+    "technologies": [
+      "PowerShell",
+      "TShark",
+      "Npcap",
+      "LLDP / CDP"
+    ],
+    "repository": "https://github.com/scoggeshall/link-neighbor",
+    "revision": "bc1383329aeed2dee544eae02cc5c2100baf0033",
+    "files": [
+      "README.md",
+      "Find-LinkNeighbor.ps1"
+    ],
+    "image": "assets/network-discovery.svg"
+  },
+  {
+    "id": "securecrt",
+    "title": "SecureCRT Scripts",
+    "summary": "Turn terminal context into repeatable, operator-controlled diagnostic workflows.",
+    "technologies": [
+      "Python",
+      "SecureCRT",
+      "OUI lookup",
+      "Cable diagnostics"
+    ],
+    "repository": "https://github.com/scoggeshall/secure-crt-scripts",
+    "revision": "9d70fc6162cfe5207c4ee97c34815c1f76b09ce1",
+    "files": [
+      "README.md",
+      "oui-lookup/oui-lookup.py",
+      "cable-test/cable-test.py"
+    ],
+    "image": "assets/network-scripting.svg"
+  },
+  {
+    "id": "banner-generator",
+    "title": "Cisco ASCII Banner Generator",
+    "summary": "Generate predictable terminal-safe banner text with explicit layout constraints.",
+    "technologies": [
+      "Python",
+      "pyfiglet",
+      "CLI",
+      "ASCII"
+    ],
+    "repository": "https://github.com/scoggeshall/cisco-ascii-banner-generator",
+    "revision": "1252b61b896d64c112aae36b37475497030a792d",
+    "files": [
+      "README.md",
+      "cisco_banner.py"
+    ],
+    "image": "assets/network-banner.svg"
+  }
+]

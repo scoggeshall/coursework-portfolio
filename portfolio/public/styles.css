@@ -735,6 +735,18 @@ main > section > h3 {
 
 .term pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 /* Project-focused presentation; demonstrations retain their own stylesheets. */
+.network-project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:1.5rem; margin:1.5rem 0; }
+.network-jump { display:flex; flex-wrap:wrap; gap:1rem 1.5rem; margin:2rem 0; }
+.network-jump a { display:inline-flex; align-items:center; min-height:44px; }
+.network-cta { margin-top:2rem; }
+.evidence-note { padding:1.25rem 1.5rem; border-left:4px solid var(--accent); background:var(--surface-2); max-width:900px; }
+.evidence-note p { margin-bottom:0; }
+.practice-case { max-width:900px; padding:2rem; margin:1.5rem auto; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+.practice-case h3 { font-size:1.5rem; margin-top:.5rem; }
+.practice-case li { margin:.8rem 0; line-height:1.7; }
+.network-code { white-space:pre-wrap; overflow-wrap:anywhere; padding:1.2rem; border:1px solid var(--border); background:var(--surface-2); }
+.revision { overflow-wrap:anywhere; }
+@media(max-width:620px) { .practice-case { padding:1.2rem; } }
 :root, :root[data-theme="light"] { --accent:#176451; --accent-strong:#10503f; --accent-soft:#e5f1ec; --text-dim:#52647b; --bg:#fafaf7; --surface-2:#f1f3ed; }
 :root[data-theme="dark"] { --accent:#82dbb9; --accent-strong:#a1efd0; --text-dim:#a2b2c8; }
 .nav { gap:1.25rem; }

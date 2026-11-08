@@ -78,6 +78,28 @@ def validate(site, sealed=True):
     demos=json.loads((ROOT/'portfolio/demos.json').read_text(encoding='utf-8'))
     if len(courses)!=len(official) or {c['code'] for c in courses}!=set(official): errors.append('Course coverage must match unique official courses')
     projects=json.loads((ROOT/'portfolio/projects.json').read_text(encoding='utf-8'))
+    network=json.loads((ROOT/'portfolio/network-projects.json').read_text(encoding='utf-8'))
+    approved_network_repositories={
+        'https://github.com/scoggeshall/link-neighbor',
+        'https://github.com/scoggeshall/secure-crt-scripts',
+        'https://github.com/scoggeshall/cisco-ascii-banner-generator',
+    }
+    if len({p['id'] for p in network})!=len(network): errors.append('Duplicate network project ID')
+    check('network-engineering.html','index.html')
+    for project in network:
+        if project['repository'] not in approved_network_repositories: errors.append('Unapproved network repository')
+        if not re.fullmatch(r'[0-9a-f]{40}',project['revision']): errors.append('Network evidence must pin a full revision')
+        route='network/'+project['id']+'.html'
+        check(route,'index.html'); check(project['image'],'index.html','img','src')
+        if route in files:
+            content=files[route].read_text(encoding='utf-8')
+            if project['revision'] not in content or project['repository'] not in content: errors.append('Network evidence metadata drift: '+route)
+    for route in ['network-engineering.html',*(r for r in pages if r.startswith('network/'))]:
+        if route not in files: continue
+        content=files[route].read_text(encoding='utf-8')
+        if re.search(r'\b(?:\d{1,3}\.){3}\d{1,3}\b|\b(?:[0-9a-f]{2}:){5}[0-9a-f]{2}\b',content,re.I): errors.append('Operational identifier in networking presentation: '+route)
+        for ref,tag,attr in pages[route].refs:
+            if urlsplit(ref).hostname=='github.com' and ref not in approved_network_repositories: errors.append('Unapproved network repository link: '+route)
     if len({p['id'] for p in projects})!=len(projects): errors.append('Duplicate project ID')
     for project in projects:
         check('projects/'+project['id']+'.html','index.html')

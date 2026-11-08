@@ -1,7 +1,12 @@
 # Technical coursework portfolio
 
-A static portfolio with four case studies, a searchable catalog of 29 courses,
-six browser demonstrations, and links to public engineering tools.
+A static portfolio with four academic case studies, three networking project
+case studies, a searchable catalog of 29 courses, and six browser demonstrations.
+
+The Network Engineering page separates author-described experience from
+repository-backed implementations, laboratory scope, and illustrative scenarios.
+Link Neighbor and SecureCRT Scripts are featured prominently, alongside the
+Cisco ASCII Banner Generator. See [networking evidence and validation](docs/NETWORK-ENGINEERING.md).
 
 Website: https://scoggeshall.github.io/coursework-portfolio/
 
@@ -10,7 +15,7 @@ Website: https://scoggeshall.github.io/coursework-portfolio/
 | Location | Purpose |
 | --- | --- |
 | `portfolio/public/` | Reviewed presentation copies; authoritative public source |
-| `portfolio/*.json` | Metadata, pinned source links, and SHA-256 publication allowlist |
+| `portfolio/*.json` | Academic/networking metadata, inspected revisions, pinned source links, and SHA-256 publication allowlist |
 | `site/` | Ignored generated output; the only Pages artifact |
 | `tools/` | Python build/validation and Node browser tests |
 | `docs/` | Publication policy and modernization evidence |

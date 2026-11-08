@@ -31,5 +31,9 @@ class BoundaryTests(unittest.TestCase):
     def test_contact_link(self): self.reject('extra.html',b'<a href="mailto:example@example.invalid">Contact</a>','Personal contact link')
     def test_missing_fragment(self): self.reject('extra.html',b'<a href="index.html#nonexistent">Home</a>','Missing fragment')
     def test_missing_file(self): self.reject('extra.html',b'<img src="absent.png" alt="test">','Missing target')
+    def test_network_identifier(self):
+        self.reject('network/extra.html',b'<p>192.0.2.1</p>','Operational identifier')
+    def test_network_repository(self):
+        self.reject('network/extra.html',b'<a href="https://github.com/example/unreviewed">Repository</a>','Unapproved network repository link')
 
 if __name__=='__main__': unittest.main()
