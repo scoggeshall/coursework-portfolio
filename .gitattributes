@@ -1,0 +1,2 @@
+# Public files are byte-reviewed; checkout must not alter their SHA-256 hashes.
+portfolio/public/** -text

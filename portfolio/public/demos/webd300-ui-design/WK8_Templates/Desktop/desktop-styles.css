@@ -1,0 +1,229 @@
+/* =========================================================================
+   Coggs Web Craft — desktop stylesheet
+   One design language shared by the default, blog, and portfolio templates.
+   The breakpoint stylesheets differ only in container width, grid columns,
+   type scale, and spacing.
+   ========================================================================= */
+
+:root {
+    --brand: #71277f;
+    --brand-dark: #551c60;
+    --brand-tint: #f7f2f8;
+    --surface: #ffffff;
+    --border: #e6dbea;
+    --text: #241b28;
+    --text-muted: #5f5566;
+    --radius: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+    background-color: var(--surface);
+    -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--brand); }
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 0.5em; }
+p { margin: 0 0 1em; }
+
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+/* ---------------------------------------------------------- site header
+   Scoped to a direct child of <body>. The documentation sections in the
+   default template nest their own <header> as a sub-heading, and an
+   unscoped rule paints every one of those as a purple bar. */
+body > header {
+    background-color: var(--brand);
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem 1.5rem;
+    padding: 1rem 2rem;
+}
+
+body > header .logo,
+body > header h1 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+body > header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+}
+
+body > header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+    border-bottom: 2px solid transparent;
+}
+body > header nav a:hover,
+body > header nav a:focus { border-bottom-color: #ffffff; }
+
+/* ------------------------------------------------------------------ hero */
+
+.hero {
+    background-color: var(--brand-tint);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    color: var(--brand);
+    font-size: 2.4rem;
+    max-width: 22ch;
+    margin: 0 auto 1.25rem;
+}
+
+.hero button {
+    background-color: var(--brand);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+.hero button:hover { background-color: var(--brand-dark); }
+
+/* ------------------------------------------------- sections and card grids
+   Services, projects, blog articles and testimonials are all cards on the
+   same grid, so one set of rules covers all three templates. */
+
+.services,
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.services,
+main > section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+main > section { margin-bottom: 3rem; }
+main > section:last-child { margin-bottom: 0; }
+
+.services > h2,
+main > section > h2 {
+    grid-column: 1 / -1;
+    color: var(--brand);
+    font-size: 1.7rem;
+    margin: 0 0 0.4rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+.services > h2 { text-align: center; border-bottom: none; padding-bottom: 0; }
+
+.service-item,
+.project,
+main > section > article,
+main > section > blockquote {
+    background-color: var(--brand-tint);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin: 0;
+    height: 100%;
+}
+
+.service-item h3,
+main > section > article h3 {
+    color: var(--brand);
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.service-item p:last-child,
+.project p:last-child,
+article p:last-child,
+blockquote p:last-child { margin-bottom: 0; }
+
+main > section > blockquote {
+    border-left: 4px solid var(--brand);
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* ------------------------------------------------- documentation sections */
+
+#main-doc { display: block; }
+
+#main-doc .main-section {
+    display: block;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+#main-doc .main-section:last-child { border-bottom: none; margin-bottom: 0; }
+
+/* This nested <header> is a sub-heading, not the site header. */
+#main-doc .main-section > header {
+    display: block;
+    background: none;
+    color: var(--brand);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 0;
+    margin-bottom: 0.75rem;
+}
+
+#main-doc code {
+    display: inline-block;
+    background-color: var(--brand-tint);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.15rem 0.45rem;
+    margin: 0.15rem 0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+}
+
+#main-doc pre {
+    background-color: var(--brand-tint);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    overflow-x: auto;
+}
+#main-doc pre code { border: none; background: none; padding: 0; }
+
+#main-doc ul { padding-left: 1.3rem; color: var(--text-muted); }
+
+/* ---------------------------------------------------------------- footer */
+
+footer {
+    background-color: var(--brand);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.75rem 2rem;
+}
+footer p { margin: 0.25rem 0; font-size: 0.95rem; }

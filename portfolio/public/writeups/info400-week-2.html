@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 2 Exercises — INFO400 — MongoDB® and Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../coursework.html">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc"><p class="note">Sanitized coursework write-up. Results describe the submitted work and have not been independently reproduced.</p>
+    <p class="eyebrow">INFO400 — MongoDB® and Python® &middot; Week 2</p>
+    <h1>Python for Data Science: Week 2 Exercises</h1>
+    <p>The following goes over the implantation and analysis of the Python script found in the WK2_SCoggeshall.py file.</p>
+    <h2>Exercise 5: Opening JSON Files</h2>
+    <h3>Implementation</h3>
+    <p>This exercise requires reading and writing JSON files in Python. The json module serializes a dictionary of car data into a JSON file and then deserializes it back into a Python object. The extracted data is displayed in a structured format (Json — JSON Encoder and Decoder, n.d.).</p>
+    <h3>Analysis of Results</h3>
+    <p>The script stored and retrieved structured data in JSON format. The formatted output provided a structured and readable display of car details.</p>
+    <h2>Exercise 6: Accessing an API with Requests</h2>
+    <h3>Implementation</h3>
+    <p>A GET request is sent to NewsAPI using the requests library to retrieve news articles about Python programming (Documentation - News API, n.d.). The response is parsed to extract and display article titles, publication dates, and URLs.</p>
+    <h3>Analysis of Results</h3>
+    <p>The API call returned relevant articles about Python programming. Using requests.get() provided a simple way to retrieve and parse JSON responses from APIs efficiently.</p>
+    <h2>Exercise 7: Manipulating Complex JSON Structures</h2>
+    <h3>Implementation</h3>
+    <p>Nested JSON data is converted into a pandas DataFrame, normalized, grouped, and reconstructed back into its original JSON structure and keeps data relationships.</p>
+    <h3>Analysis of Results</h3>
+    <p>The transformation allowed efficient analysis of nested JSON data using pandas, keeping data integrity through normalization and restructuring.</p>
+    <h2>Exercise 8: Performing a One-to-Many Join</h2>
+    <h3>Implementation</h3>
+    <p>A relational database join is executed in MySQL, linking employees (emps) to orders (orders). The query retrieves order numbers, employee names, and order totals for employees with an empno greater than 9001.</p>
+    <h3>Analysis of Results</h3>
+    <p>The join operation retrieved employee order details, using SQL to manage relationships between tables and keep data accuracy in relational databases.</p>
+    <h2>Exercise 9: Inserting and Querying Multiple Documents</h2>
+    <h3>Implementation</h3>
+    <p>Bulk insertions and document retrieval are performed using MongoDB and PyMongo. Employee records are stored with embedded order details, and queries are executed to fetch all employee documents from the collection.</p>
+    <h3>Analysis of Results</h3>
+    <p>MongoDB’s flexibility allowed efficient storage and retrieval of employee records, demonstrating NoSQL’s ability to handle hierarchical data structures and its scalability for large datasets.</p>
+    <h2>Critique of AI Tools Used</h2>
+    <p>AI tools can be difficult to use when using API keys and local database files. I try not to upload any API keys or passwords into prompts or scripts. I use place holders to keep that information private. AI tools accelerated development but required human revision for correctness and best practices.</p>
+    <p>References</p>
+    <p>json — JSON encoder and decoder. (n.d.). Python Documentation. https://docs.python.org/3/library/json.html</p>
+    <p>Documentation - News API. (n.d.). https://newsapi.org/docs</p>
+    <p>MySQL :: MySQL Connector/Python Release Notes. (n.d.). https://dev.mysql.com/doc/relnotes/connector-python/en/</p>
+    <p>MongoDB. (n.d.). https://learn.mongodb.com/learn/learning-path/using-mongodb-with-python</p>
+    <p>pythondatabook/sources. (n.d.). Python for Data Science, supporting educational examples</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

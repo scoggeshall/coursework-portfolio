@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 8 Final Project — INFO400 — MongoDB® and Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../coursework.html">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc"><p class="note">Sanitized coursework write-up. Results describe the submitted work and have not been independently reproduced.</p>
+    <p class="eyebrow">INFO400 — MongoDB® and Python® &middot; Week 8</p>
+    <h1>Python for Data Science: Week 8 Final Project</h1>
+    <aside class="note"><strong>Portfolio review:</strong> The source prints RMSE under an MAE label and uses observed lag values in its held-out period. Reported metrics below are historical, unverified claims. <a href="../projects/info400.html">Read the implementation review and limitations.</a></aside><h2>Week 8 Project: Florida Housing Price Analysis and Prediction</h2>
+    <p>This project analyzes historical Zillow Home Value Index (ZHVI) trends for single-family homes in all Florida counties, with focused attention on Duval County (Jacksonville) and St. Johns County, FL, from 2018 to 2023. It uses a linear regression model to forecast future home values based on historical trends.</p>
+    <h3>Objective and Scope</h3>
+    <p>The primary objective is to visualize historical home value trends and develop a simple but effective prediction model based on past ZHVI values. The analysis covers monthly ZHVI data from 2018–2023 for single-family homes across Florida counties, specifically highlighting Duval and St. Johns counties.</p>
+    <h3>Dataset and Problem</h3>
+    <p>The dataset, obtained from Zillow Research (fl.csv), contains county-level monthly ZHVI values. The core task is predicting future ZHVI values based on recent historical trends.</p>
+    <h3>Approach</h3>
+    <p>The project involves visualizing monthly trends with line charts and employing linear regression using the past 12 months&#x27; home values to predict the next year’s ZHVI.</p>
+    <h3>Data Description</h3>
+    <ul>
+      <li>The dataset includes three main features:</li>
+      <li>Date (datetime): monthly measurement date</li>
+      <li>RegionName (string): county names</li>
+      <li>ZHVI (float): Zillow Home Value Index values</li>
+    </ul>
+    <h3>Reported summary statistics (2018–2023)</h3><table><thead><tr><th>County</th><th>Mean ($)</th><th>Std. dev. ($)</th><th>Min ($)</th><th>Median ($)</th><th>Max ($)</th></tr></thead><tbody><tr><td>Duval</td><td>236,821</td><td>48,941</td><td>174,735</td><td>217,007</td><td>310,136</td></tr><tr><td>St. Johns</td><td>397,276</td><td>87,392</td><td>301,573</td><td>352,660</td><td>528,329</td></tr></tbody></table><p>Preprocessing involved filtering from complete county data, converting dates, and handling missing values.</p>
+    <h3>Data Visualization Report</h3>
+    <p>Visualizations created as line charts reveal clear trends over the five-year period. Duval County displayed steady growth with a notable peak around 2021–2022. St. Johns County consistently maintained higher home values but exhibited more volatility, surpassing $500,000 at its peak. The visualizations provided comparative insights, highlighting differing trends and volatility between counties. </p>
+    <h3>Data Prediction Report</h3>
+    <p>A linear regression model was selected due to its simplicity, interpretability, and effectiveness in capturing linear historical trends using the previous 12 months of ZHVI data.</p>
+    <h3>Reported evaluation results</h3><table><thead><tr><th>County</th><th>MAE ($)</th><th>R²</th></tr></thead><tbody><tr><td>Duval</td><td>754.46</td><td>0.78</td></tr><tr><td>St. Johns</td><td>2,021.23</td><td>0.33</td></tr></tbody></table><p>The model performs well for Duval County, indicating stable predictability. St. Johns County’s lower R² reflects higher volatility and less predictability. </p>
+    <h3>Implementation Details</h3>
+    <p>The project was implemented in Python 3 using pandas, numpy, matplotlib, seaborn, and scikit-learn. It can run in any standard Python environment or Jupyter Notebook on standard hardware without the need for specialized resources.</p>
+    <h3>Conclusion &amp; Recommendations</h3>
+    <p>The analysis revealed distinct trends and variability between counties. Linear regression offered reliable forecasts for steadily growing counties, but performance varied in more volatile areas. ZHVI historical trends serve as useful indicators for forecasting in stable markets.</p>
+    <p>Future analyses could benefit from incorporating macroeconomic factors like mortgage rates, employment data, and demographics. Exploring advanced time series models, such as ARIMA or machine learning, may enhance accuracy.</p>
+    <h3>Code Documentation</h3>
+    <p>The Python script (WK8_SCoggeshall.py) includes clearly documented sections covering data loading, preprocessing, visualization, feature engineering (lagged values), model training, prediction, evaluation, and plotting. Comments and docstrings provide a clear rationale for each processing step.</p>
+    <h3>Future Work</h3>
+    <p>Future extensions may incorporate additional economic indicators, explore advanced modeling techniques (e.g., ARIMA, Prophet, LSTM), include other housing categories like condos or multifamily properties, or expand the geographic scope. Developing interactive dashboards could also enhance the project&#x27;s utility.</p>
+    <h3>Prompt and AI Acknowledgment</h3>
+    <p>The project utilized a structured prompt outlining necessary documentation, focusing on clarity and reproducibility in data science. OpenAI&#x27;s ChatGPT assisted with Python scripting, debugging, and simplifying complex scripts, enhancing documentation clarity. AI-driven code reviews improved problem-solving and understanding of analytical techniques, resulting in a robust final product.</p>
+    <p>References</p>
+    <p>Housing data - Zillow Research. (2025, February 13). Zillow. https://www.zillow.com/research/data/</p>
+    <p>scikit-learn: machine learning in Python — scikit-learn 1.6.1 documentation. (n.d.). https://scikit-learn.org/stable/</p>
+    <p>pandas documentation — pandas 2.2.3 documentation. (n.d.). https://pandas.pydata.org/docs/</p>
+    <p>Using Matplotlib — Matplotlib 3.10.1 documentation. (n.d.). https://matplotlib.org/stable/users/index.html</p>
+    <p>seaborn: statistical data visualization — seaborn 0.13.2 documentation. (n.d.). https://seaborn.pydata.org/</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

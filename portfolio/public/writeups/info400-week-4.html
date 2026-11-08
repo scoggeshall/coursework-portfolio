@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 4 Exercises — INFO400 — MongoDB® and Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../coursework.html">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc"><p class="note">Sanitized coursework write-up. Results describe the submitted work and have not been independently reproduced.</p>
+    <p class="eyebrow">INFO400 — MongoDB® and Python® &middot; Week 4</p>
+    <h1>Python for Data Science: Week 4 Exercises</h1>
+    <p>The following document provides a detailed explanation, analysis, and evaluation of two Python programming exercises performed as part of Week 4 coursework.</p>
+    <h2>Exercise 12: Combining Bins into an “Other” Slice</h2>
+    <h3>Overview</h3>
+    <p>The goal of Exercise 12 was to create a visualization of monthly salaries in a hypothetical sales department by constructing a pie chart from provided salary data. Salaries were initially grouped into bins of $50 increments. To simplify and enhance readability, bins containing two or fewer employees were combined into a single &quot;Others&quot; category.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>NumPy Histogram: Utilized to group continuous data into discrete intervals (bins).</li>
+      <li>List Comprehension: Efficiently generated bin labels from numerical ranges.</li>
+      <li>Conditional Aggregation: Merged sparse data bins into a consolidated category (&quot;Others&quot;).</li>
+      <li>Matplotlib Visualization: Created and customized a pie chart visualization with proper labeling.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The resulting pie chart successfully illustrates the distribution of salaries, clearly differentiating between common salary ranges and the aggregated &quot;Others&quot; category. This visualization approach significantly improved readability, especially in cases with low-frequency categories. By combining smaller bins, the chart emphasized the most common salary ranges, providing immediate and clear insights into salary distribution patterns.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used &quot;Complete the following, keep it simple but meet all requirements. Modify the pie chart to combine bins with 1 or 2 employees into an Other slice by altering the count array and labels list, then re-create the chart.”</p>
+    <p>The result provided a functional solution using list comprehension to filter and aggregate bins. Initially, it suggested a more complex method with additional data structures, but I refined it for simplicity and efficiency. The final code meets all requirements, accurately combining bins and producing a clear visualization.</p>
+    <h2>Exercise 13: Adding New Rows/Columns to a NumPy Array</h2>
+    <h3>Overview</h3>
+    <p>Exercise 13 focused on creating geographic visualization using Cartopy and Matplotlib. The goal was to plot the locations of cities in North Florida on a map, clearly marking and labeling cities with populations exceeding 200,000. Latitude and longitude ranges were specified explicitly to focus the map on the North Florida region.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Geospatial Data Visualization: Creating geographic plots with Cartopy, specifically the Mercator projection.</li>
+      <li>Filtering Data with pandas: Extracting relevant cities based on geographic coordinates and population thresholds.</li>
+      <li>Map Customization: Enhancing visual clarity by setting latitude/longitude ticks and formatting tick labels.</li>
+      <li>Annotation: Clearly labeling cities on the map for improved readability and contextual understanding.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The resulting map accurately depicted North Florida, highlighting major cities clearly. The visual effectively communicated geographic distribution and population density, emphasizing the location of major urban centers such as Jacksonville. By annotating cities with populations over 200,000, the visualization successfully provided insights into urbanization patterns and population concentration in North Florida.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used “Complete the following, keep it simple but meet all requirements. Create a map of North Florida cities using Cartopy and Matplotlib, specifying appropriate latitude and longitude ranges, and label cities with populations over 200,000.&quot;</p>
+    <p>The generated code accurately filtered and plotted North Florida cities using pandas and Cartopy. While initially lacking annotations, precise longitude boundaries, and state outlines, minor refinements, such as narrowing the map extent, labeling major cities, and improving styling were applied. These adjustments enhanced clarity and alignment with best practices for geographic data visualization.</p>
+    <p>References</p>
+    <p>Cartopy Developers. (n.d.). Cartopy documentation. SciTools. https://scitools.org.uk/cartopy/docs/latest/</p>
+    <p>NumPy Developers. (n.d.). numpy.histogram. NumPy. https://numpy.org/doc/stable/reference/generated/numpy.histogram.html</p>
+    <p>Plotly. (n.d.). us-cities-top-1k.csv [Dataset]. GitHub. Retrieved March 30, 2025, from Plotly educational cities dataset</p>
+    <p>Matplotlib Developers. (n.d.). Pyplot tutorial. Matplotlib. https://matplotlib.org/stable/tutorials/pyplot.html</p>
+    <p>pythondatabook. (n.d.). Sources [Code repository]. GitHub. Retrieved March 30, 2025, from Python for Data Science, supporting educational examples</p>
+    <p>Vasiliev, Y., Barbeau, B., &amp; McCart, J. (2022). Python for data science: A hands-on introduction. No Starch Press.</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

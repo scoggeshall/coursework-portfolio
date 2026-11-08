@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 6 Exercise — INFO400 — MongoDB® and Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../coursework.html">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc"><p class="note">Sanitized coursework write-up. Results describe the submitted work and have not been independently reproduced.</p>
+    <p class="eyebrow">INFO400 — MongoDB® and Python® &middot; Week 6</p>
+    <h1>Python for Data Science: Week 6 Exercise</h1>
+    <p>Exercise 18 required analyzing a real-world dataset containing over half a million transaction records. Due to a &quot;502 Bad Gateway&quot; error while attempting to access the UCI Datasets Repository, the alternative Online Retail dataset from Kaggle was used for the analysis. The dataset contains transactional data, enabling market basket analysis through frequent itemset mining and association rule generation.</p>
+    <h3>Exercise 18: Mining Real Transaction Data Overview</h3>
+    <p>This exercise involved extracting insights from transactional data by identifying frequent item sets and generating association rules. Using Python libraries including pandas, numpy, and mlxtend, the dataset was cleaned, encoded into a suitable format, and analyzed to discover item relationships.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Removed entries missing item descriptions and grouped transactions by invoice.</li>
+      <li>Transformed transaction data into a one-hot encoded format using TransactionEncoder.</li>
+      <li>Identified frequent itemsets using the Apriori algorithm (min. support: 2.5%).</li>
+      <li>Generated association rules (min. confidence: 30%), evaluated by confidence and lift metrics.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The script The analysis identified 136 frequent itemsets, with &quot;WHITE HANGING HEART T-LIGHT HOLDER&quot; being most common (9.4%). Strong product associations included:</p>
+    <p>&quot;ALARM CLOCK BAKELIKE GREEN&quot; → &quot;ALARM CLOCK BAKELIKE RED&quot; (confidence: 64.5%, lift: 14.59).</p>
+    <p>&quot;GREEN REGENCY TEACUP AND SAUCER&quot; ↔ &quot;PINK REGENCY TEACUP AND SAUCER&quot; (confidence up to 80.4%, lift: 18.59).</p>
+    <p>These results suggest effective opportunities for product bundling, targeted promotions, and inventory management improvements.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used &quot; Generate Python code to perform market basket analysis using the Apriori algorithm on a retail dataset.”</p>
+    <p>The code effectively outlined the full workflow for market basket analysis, clearly sequencing steps from data preprocessing to frequent itemset mining and association rule generation and recommending reasonable default parameters. It provided readable and executable Python code with correct library imports. However, it lacked essential data quality checks (such as handling missing descriptions), omitted exploratory data analysis and visualizations for better interpretation, and initially did not include filtering association rules by key metrics like lift or confidence to highlight actionable business insights.</p>
+    <p>References</p>
+    <p>pythondatabook. (n.d.). Sources [Code repository]. GitHub. Retrieved March 30, 2025, from Python for Data Science, supporting educational examples</p>
+    <p>Vasiliev, Y., Barbeau, B., &amp; McCart, J. (2022). Python for data science: A hands-on introduction. No Starch Press.</p>
+    <p>Online retail. (n.d.). https://www.kaggle.com/datasets/tunguz/online-retail</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

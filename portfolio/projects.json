@@ -1,0 +1,39 @@
+[
+  {
+    "id": "info400",
+    "title": "Florida housing analysis",
+    "subtitle": "Turning monthly housing data into an inspectable regression workflow.",
+    "image": "assets/housing-pipeline.svg",
+    "codes": [
+      "INFO400"
+    ]
+  },
+  {
+    "id": "entd320",
+    "title": "Flask calculator microservices",
+    "subtitle": "Two HTTP services, a shared history, and a browser interface.",
+    "image": "assets/flask-architecture.svg",
+    "codes": [
+      "ENTD320"
+    ]
+  },
+  {
+    "id": "systems",
+    "title": "From requirements to system design",
+    "subtitle": "Data flows, application architecture, and a point-of-sale capstone.",
+    "image": "assets/ContextDFD.png",
+    "codes": [
+      "ENTD268",
+      "INFO498"
+    ]
+  },
+  {
+    "id": "webd300",
+    "title": "Responsive interface design",
+    "subtitle": "A working site and templates for desktop, tablet, and mobile.",
+    "image": "assets/ui-design-demo.png",
+    "codes": [
+      "WEBD300"
+    ]
+  }
+]
