@@ -40,9 +40,10 @@ try {
     assert.equal(response.status,200,name);
   }
   const projects = JSON.parse(await readFile(path.join(root,'portfolio/projects.json'),'utf8'));
+  const network = JSON.parse(await readFile(path.join(root,'portfolio/network-projects.json'),'utf8'));
   for (const width of [1440,390]) {
     await page.setViewportSize({width,height:1000});
-    for (const route of ['index.html','coursework.html',...projects.map(p=>`projects/${p.id}.html`)]) {
+    for (const route of ['index.html','coursework.html','network-engineering.html',...network.map(p=>`network/${p.id}.html`),...projects.map(p=>`projects/${p.id}.html`)]) {
       await page.goto(`${base}/${route}`);
       assert.equal(await page.locator('h1').count(),1,route);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),`Horizontal overflow: ${route} ${width}`);
@@ -57,11 +58,30 @@ try {
     await page.screenshot({path:path.join(local,`homepage-${width}.png`),fullPage:true});
     assert.equal(await page.locator('[data-stat="courses"]').textContent(),'29');
     assert.equal(await page.locator('[data-stat="projects"]').textContent(),String(projects.length));
+    await page.getByRole('link',{name:'Explore Network Engineering →',exact:true}).click();
+    assert(page.url().endsWith('/network-engineering.html'));
+    assert.equal(await page.locator('.practice-case').count(),6);
+    for(const project of network) {
+      await page.locator(`a[href="network/${project.id}.html"]`).first().click();
+      assert.equal(await page.locator('h1').textContent(),project.title);
+      await page.getByRole('link',{name:'Back to Network Engineering'}).click();
+    }
+    await page.locator('[data-theme-toggle]').click();
+    const networkDark = await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+    report.pages.push({route:'network-engineering.html (dark)',width,violations:networkDark.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))});
+    await page.locator('[data-theme-toggle]').click();
+    await page.screenshot({path:path.join(local,`network-${width}.png`),fullPage:true});
+    await page.evaluate(()=>window.scrollTo(0,0));
+    await page.screenshot({path:path.join(local,`network-top-${width}.png`)});
+    await page.goto(`${base}/index.html`);
     if(width===390) {
       const menu=page.getByRole('button',{name:'Menu',exact:true});
       assert.equal(await page.locator('#primary-nav').isVisible(),false);
       await menu.click(); assert.equal(await menu.getAttribute('aria-expanded'),'true');
       await page.keyboard.press('Escape'); assert.equal(await menu.getAttribute('aria-expanded'),'false');
+      await menu.click(); await page.locator('#primary-nav').getByRole('link',{name:'Network Engineering',exact:true}).click();
+      assert(page.url().endsWith('/network-engineering.html'));
+      assert.equal(await menu.getAttribute('aria-expanded'),'false');
       await menu.click(); await page.locator('#primary-nav').getByRole('link',{name:'Coursework',exact:true}).click();
       assert(page.url().endsWith('/coursework.html'));
     }
