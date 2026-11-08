@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A static Ye music quiz and fan response form.">
+    <meta name="keywords" content="HTML, CSS, forms, music, Kanye West, Ye">
+    <meta name="author" content="Sean Coggeshall">
+    <title>WEBD121 — Web Development Fundamentals · Quiz | Ye Music Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body><aside style="padding:12px;background:#eaf3f7;color:#172e3b;font:16px system-ui"><a href="../../index.html#demos">Portfolio</a> · WEBD121 — Web Development Fundamentals · Adapted coursework demo. Use fictional input.</aside>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">Ye Music Notes</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="table.html">Creators</a>
+                <a href="form.html" aria-current="page">Quiz</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="subpage-hero quiz-hero">
+            <div>
+                <p class="eyebrow">Fan quiz</p>
+                <h1>Build your Ye listening profile</h1>
+                <p>Choose favorites, name a standout feature, and save a quick response right in the page.</p>
+            </div>
+        </section>
+
+        <section class="content-band form-layout">
+            <form class="quiz-form" data-quiz-form>
+                <div class="form-section">
+                    <p class="eyebrow">Your picks</p>
+                    <h2>Kanye Questions</h2>
+                    <div class="field-grid">
+                        <label>
+                            <span>Favorite song</span>
+                            <input type="text" name="favoriteSong" placeholder="Example: Otis">
+                        </label>
+                        <label>
+                            <span>Favorite feature</span>
+                            <input type="text" name="favoriteFeature" placeholder="Example: American Boy">
+                        </label>
+                    </div>
+                </div>
+
+                <fieldset class="form-section">
+                    <legend>Favorite early album</legend>
+                    <label class="choice"><input type="radio" name="earlyAlbum" value="The College Dropout"> The College Dropout</label>
+                    <label class="choice"><input type="radio" name="earlyAlbum" value="Late Registration"> Late Registration</label>
+                    <label class="choice"><input type="radio" name="earlyAlbum" value="Graduation"> Graduation</label>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>Favorite later albums</legend>
+                    <label class="choice"><input type="checkbox" name="laterAlbum" value="Donda"> Donda</label>
+                    <label class="choice"><input type="checkbox" name="laterAlbum" value="Jesus Is King"> Jesus Is King</label>
+                    <label class="choice"><input type="checkbox" name="laterAlbum" value="Ye"> Ye</label>
+                </fieldset>
+
+                <div class="form-section">
+                    <label>
+                        <span>Live show memory</span>
+                        <textarea name="liveMemory" rows="6" placeholder="If you saw Ye live, what stood out?"></textarea>
+                    </label>
+                </div>
+
+                <div class="form-section">
+                    <label>
+                        <span>Streaming services</span>
+                        <select name="streamingService" multiple size="4">
+                            <option value="Apple Music">Apple Music</option>
+                            <option value="Spotify">Spotify</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button class="button button-primary" type="submit">Save picks</button>
+                    <button class="button button-secondary" type="reset">Reset</button>
+                    <button class="button button-quote" type="button" data-quote-trigger>Show quote</button>
+                </div>
+            </form>
+
+            <aside class="result-panel" aria-live="polite">
+                <p class="eyebrow">Response</p>
+                <h2>Your summary</h2>
+                <p data-quote-output>Being a fan of Kanye is being a fan of yourself.</p>
+                <div class="summary-box" data-quiz-output>
+                    <p>Submit the form to see your listening profile here.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Sean Coggeshall as a static HTML and CSS site.</p>
+    </footer>
+<script src="../demo-safety.js"></script></body>
+</html>

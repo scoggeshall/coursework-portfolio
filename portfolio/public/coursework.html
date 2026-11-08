@@ -1,0 +1,299 @@
+<!doctype html><html lang="en-US"><head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Coursework — Technical portfolio</title><meta name="description" content="Evidence-based project case studies and coursework."><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap nav"><a class="brand" href="index.html">Sean Coggeshall <span>/ IT</span></a><button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" hidden>Menu</button><nav id="primary-nav" class="nav-links" aria-label="Primary"><a href="index.html#featured">Projects</a><a href="coursework.html">Coursework</a><a href="index.html#engineering">Professional Engineering</a><a href="index.html#about">About</a><a href="index.html#certifications">Certifications</a></nav><button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch between light and dark theme">◐</button></div></header><main id="main" class="wrap"><section id="coursework">
+    <div class="section-head">
+        <p class="eyebrow">All Courses</p>
+        <h1>Coursework</h1>
+        <p>All 29 represented courses across both degrees. Filter by discipline, or by the courses
+           with a running demo.</p>
+    </div>
+
+    <label for="course-search">Search by course, technology, or keyword</label><input id="course-search" type="search" placeholder="Try Python, design, or INFO400" autocomplete="off"><div class="filters" data-filters role="group" aria-label="Filter coursework"></div>
+    <p class="course-count" data-count role="status" aria-live="polite"></p><p data-empty hidden>No courses match. Try another keyword or choose All.</p>
+    <div class="course-grid" data-course-grid></div>
+</section><p>The complete academic collection is preserved locally. This catalog covers every represented course; restricted records and unreviewed originals are not public downloads.</p><p><a href="writeups/index.html">Browse all reviewed academic write-ups</a></p><noscript><p>Keyword search requires JavaScript. The full course list follows.</p><ul><li>ITCC112 — Advanced Productivity Applications</li><li>WEBD121 — Web Development Fundamentals</li><li>ENTD200 — Fundamentals of Programming</li><li>ITCC231 — Introduction to Information Technology Writing</li><li>MGMT100 — Human Relations</li><li>ITCC121 — Introduction to Computer Science</li><li>ITMG221 — IT Project Management</li><li>STEM185 — The History and Context of STEM</li><li>STEM270 — Thinking and Acting Ethically</li><li>ITCC298 — Computer Technology Intermediate Capstone</li><li>INFO222 — Database Concepts</li><li>INFO331 — Management Information Systems</li><li>ISSC221 — Intermediate Computer Systems</li><li>STEM380 — Coevolution of Society, Culture, and Technology</li><li>WEBD241 — Web Development Using JavaScript®</li><li>WEBD300 — User Interface Design</li><li>ENTD120 — User Experience I</li><li>ENTD220 — Introduction to Python®</li><li>ENTD268 — Information System Design</li><li>ISSC297 — Securing Applications</li><li>STEM470 — Cybersecurity, Surveillance, Privacy and Ethics</li><li>WEBD221 — Intermediate Web Development</li><li>HRMT101 — Human Relations Communication</li><li>ISSC290 — Securing Databases</li><li>WEBD122 — Introduction to Web Analytics</li><li>ENTD320 — Intermediate Python® Programming</li><li>INFO400 — MongoDB® and Python®</li><li>INFO498 — Information Technology: Capstone</li><li>WEBD343 — jQuery</li></ul></noscript><section><h2>Additional project notes</h2><article class="project" id="project-info400">
+            <div class="project-head">
+                <h3>Florida Housing Analysis And Prediction</h3>
+                <span class="code-chip">INFO400 — MongoDB® and Python®</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Loads Zillow Home Value Index data for every Florida county, reshapes
+                        the wide monthly columns into a tidy time series, and filters to
+                        2018&ndash;2023. For each county it builds twelve monthly lag features,
+                        trains a linear regression model, and scores actual versus predicted
+                        home values.
+                    </p>
+                    <p>
+                        Output is a per-county set of trend plots, actual-vs-predicted charts,
+                        and evaluation metrics. Counties with fewer than 24 observations are
+                        skipped rather than trained on insufficient data.
+                    </p>
+                    <ul class="tags">
+                        <li>pandas</li><li>NumPy</li><li>scikit-learn</li>
+                        <li>seaborn</li><li>matplotlib</li><li>Regression</li>
+                    </ul>
+                    <div class="actions"><a class="link-btn" href="writeups/info400-week-8.html">View Results</a></div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">Housing analysis</div><pre>County observations → monthly time series
+Twelve lag features → regression
+Held-out observations → evaluation</pre></div>
+                    <div class="readout">
+                        <div><b>67</b><span>FL Counties</span></div>
+                        <div><b>72 mo</b><span>Time Series</span></div>
+                        <div><b>12</b><span>Lag Features</span></div>
+                        <div><b>MSE / R²</b><span>Scored On</span></div>
+                    </div>
+                </div>
+            </div>
+        </article><article class="project" id="project-entd320">
+            <div class="project-head">
+                <h3>Flask Calculator: From One Route To Two Microservices</h3>
+                <span class="code-chip">ENTD320 — Intermediate Python® Programming</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Week 1 is a Flask app that returns a greeting. By week 7 the same
+                        calculator has become two independent services — a JSON arithmetic API
+                        and a second service — sharing one SQLite database and writing every
+                        calculation to a common history table.
+                    </p>
+                    <p>
+                        Along the way: an encapsulated <code>Use_Calculator</code> class with private
+                        methods, RESTful URL routes, Jinja2 templates with form handling, database
+                        persistence with a history page, and a <code>unittest</code> suite
+                        covering every operation.
+                    </p>
+                    <ul class="tags">
+                        <li>Flask</li><li>Jinja2</li><li>REST</li><li>SQLite</li>
+                        <li>unittest</li><li>Microservices</li>
+                    </ul>
+                    <div class="actions">
+
+
+
+                    </div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">Calculator design</div><pre>Browser interface → arithmetic service
+Calculation → shared history
+Tests → operation checks</pre></div>
+                    <div class="readout">
+                        <div><b>7 wks</b><span>Iterations</span></div>
+                        <div><b>2</b><span>Services</span></div>
+                        <div><b>1</b><span>Shared DB</span></div>
+                    </div>
+                </div>
+            </div>
+        </article><article class="project" id="project-webd221">
+            <div class="project-head">
+                <h3>The Evolution Of Video Games</h3>
+                <span class="code-chip">WEBD221 — Intermediate Web Development</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        A four-page site built up one week at a time — semantic structure first,
+                        then a stylesheet, then imagery, then JavaScript behaviour, then a
+                        validated submission form. The final experience combines these stages into a browser-native demonstration.
+                    </p>
+                    <p>
+                        Three content pages — an overview, a console-wars history, and a personal
+                        favourites list — plus the game submission form, sharing a stylesheet and
+                        a console image set.
+                    </p>
+                    <ul class="tags">
+                        <li>HTML5</li><li>CSS</li><li>JavaScript</li><li>Forms</li><li>Responsive</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="demos/webd221-evolution-of-video-games/index.html">Open Site</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">Web progression</div><pre>Structure → navigation → imagery
+Interaction → validation → final experience</pre></div>
+                </div>
+            </div>
+        </article><article class="project" id="project-webd241">
+            <div class="project-head">
+                <h3>JavaScript Final Project</h3>
+                <span class="code-chip">WEBD241 — Web Development Using JavaScript®</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Seven JavaScript assignments — array sorting, an athlete image gallery,
+                        a student information form with validation — collected into one site
+                        behind a jQuery drop-down menu.
+                    </p>
+                    <p>
+                        The final project is the entry point; each assignment remains reachable
+                        from the menu as its own page.
+                    </p>
+                    <ul class="tags">
+                        <li>JavaScript</li><li>DOM</li><li>Validation</li><li>jQuery</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="demos/webd241-javascript-final/FinalProject.html">Open Final Project</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">JavaScript interaction</div><pre>Arrays and sorting
+Gallery navigation
+Fictional-input form validation</pre></div>
+                </div>
+            </div>
+        </article><article class="project" id="project-webd343">
+            <div class="project-head">
+                <h3>jQuery Interaction Set</h3>
+                <span class="code-chip">WEBD343 — jQuery</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        Four jQuery builds across the term: DOM manipulation basics, a
+                        hand-rolled accordion, an image slider with timed transitions, and a
+                        final accordion packaged as a reusable jQuery plugin
+                        (<code>accordion.jquery.js</code>) rather than inline script.
+                    </p>
+                    <p>
+                        The content is local — the beaches from Jacksonville down to
+                        St. Augustine — so the pages use real copy rather than placeholder text.
+                    </p>
+                    <ul class="tags">
+                        <li>jQuery</li><li>Plugin Authoring</li><li>DOM</li><li>Animation</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="demos/webd343-jquery/index.html">Open Final Project</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">Reusable interaction</div><pre>Heading selection → panel expansion
+Sibling panels → collapse
+Plugin options → animation</pre></div>
+                </div>
+            </div>
+        <figure class="gallery"><a href="assets/jquery-demo.png"><img src="assets/jquery-demo.png" alt="WEBD343 — jQuery browser demo screenshot" loading="lazy"></a><figcaption>WEBD343 — jQuery — browser demonstration</figcaption></figure></article><article class="project" id="project-webd300">
+            <div class="project-head">
+                <h3>Coggs Web Craft</h3>
+                <span class="code-chip">WEBD300 — User Interface Design</span>
+            </div>
+            <div class="project-body">
+                <div>
+                    <p>
+                        A user-interface course taken as a design-system exercise. The landing
+                        page is the finished build; behind it sits a template family — default,
+                        blog, and portfolio — delivered three times over with dedicated
+                        desktop, tablet, and mobile stylesheets.
+                    </p>
+                    <p>
+                        Open the project to compare desktop, tablet and mobile layouts.
+                    </p>
+                    <ul class="tags">
+                        <li>UI Design</li><li>Responsive Layout</li><li>Templates</li><li>CSS</li>
+                    </ul>
+                    <div class="actions">
+                        <a class="link-btn live" href="demos/webd300-ui-design/index.html">Open Project</a>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="term"><div class="term-bar">Responsive design</div><pre>Shared content structure
+Desktop · Tablet · Mobile
+Default · Blog · Portfolio</pre></div>
+                </div>
+            </div>
+        <figure class="gallery"><a href="assets/ui-design-demo.png"><img src="assets/ui-design-demo.png" alt="WEBD300 — User Interface Design browser demo screenshot" loading="lazy"></a><figcaption>WEBD300 — User Interface Design — browser demonstration</figcaption></figure></article><article class="project" id="project-entd268">
+            <div class="project-head">
+                <h3>Information System Design Documents</h3>
+                <span class="code-chip">ENTD268 — Information System Design</span>
+            </div>
+            <div class="project-body single">
+                <div>
+                    <p>
+                        A complete analysis-and-design pass on one system, carried from a planning
+                        vision through an SRS with use cases, data flow diagrams at two levels, a
+                        UML model, an ERD, a system architecture, a structure chart, and finally an
+                        SDD with test cases. Select a diagram below to inspect the design at full size.
+                    </p>
+                    <ul class="tags">
+                        <li>SRS</li><li>SDD</li><li>DFD</li><li>UML</li><li>ERD</li>
+                        <li>Use Cases</li><li>draw.io</li>
+                    </ul>
+                    <div class="gallery">
+                        <figure>
+                            <a href="assets/ContextDFD.png" aria-label="View full-size diagram"><img src="assets/ContextDFD.png" alt="Context-level data flow diagram" loading="lazy"></a>
+                            <figcaption>Context DFD</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/DFD0.png" aria-label="View full-size diagram"><img src="assets/DFD0.png" alt="Level 0 data flow diagram" loading="lazy"></a>
+                            <figcaption>DFD Level 0</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/erd.png" aria-label="View full-size diagram"><img src="assets/erd.png" alt="Entity relationship diagram" loading="lazy"></a>
+                            <figcaption>ERD</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/UML.png" aria-label="View full-size diagram"><img src="assets/UML.png" alt="UML class diagram" loading="lazy"></a>
+                            <figcaption>UML</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/Structure_Chart.png" aria-label="View full-size diagram"><img src="assets/Structure_Chart.png" alt="Structure chart" loading="lazy"></a>
+                            <figcaption>Structure Chart</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/WK4_System_Architecture.png" aria-label="View full-size diagram"><img src="assets/WK4_System_Architecture.png" alt="System architecture diagram" loading="lazy"></a>
+                            <figcaption>System Architecture</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/mockup.png" aria-label="View full-size diagram"><img src="assets/mockup.png" alt="Interface mockup" loading="lazy"></a>
+                            <figcaption>Interface Mockup</figcaption>
+                        </figure>
+                    </div>
+                    <div class="actions">
+
+                    </div>
+                </div>
+            </div>
+        </article><article class="project" id="project-info498">
+            <div class="project-head">
+                <h3>Information Technology: Capstone</h3>
+                <span class="code-chip">INFO498 — Information Technology: Capstone</span>
+            </div>
+            <div class="project-body single">
+                <div>
+                    <p>
+                        The degree's closing project: a point-of-sale system specified end to end.
+                        Network topology, screen layout, project schedule, and a costed build —
+                        the planning and design deliverables rather than source code.
+                    </p>
+                    <ul class="tags">
+                        <li>Requirements</li><li>Network Design</li><li>Project Planning</li>
+                        <li>Cost Analysis</li><li>Gantt</li>
+                    </ul>
+                    <div class="gallery">
+                        <figure>
+                            <a href="assets/Network.png" aria-label="View full-size diagram"><img src="assets/Network.png" alt="Network topology diagram" loading="lazy"></a>
+                            <figcaption>Network Topology</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="assets/POS_ScreenLayout.png" aria-label="View full-size diagram"><img src="assets/POS_ScreenLayout.png" alt="Point of sale screen layout" loading="lazy"></a>
+                            <figcaption>POS Screen Layout</figcaption>
+                        </figure>
+
+                        <figure>
+                            <a href="assets/CostBreakDown.png" aria-label="View full-size diagram"><img src="assets/CostBreakDown.png" alt="Cost breakdown" loading="lazy"></a>
+                            <figcaption>Cost Breakdown</figcaption>
+                        </figure>
+                    </div>
+                    <div class="actions">
+
+                    </div>
+                </div>
+            </div>
+        </article></section></main><footer class="site-footer"><div class="wrap">Technical projects · Academic foundations · Practical engineering</div></footer></body></html>

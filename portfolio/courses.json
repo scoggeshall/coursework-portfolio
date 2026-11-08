@@ -1,0 +1,447 @@
+[
+  {
+    "code": "ENTD200",
+    "title": "Fundamentals of Programming",
+    "level": "as",
+    "areas": [
+      "programming"
+    ],
+    "blurb": "Console applications with real problem domains: a car trip tracker, MPG calculators, and a payroll program with validated numeric input.",
+    "tags": [
+      "Python",
+      "Functions",
+      "Dictionaries",
+      "Reports"
+    ],
+    "writeups": {
+      "slug": "fundamentals",
+      "count": 2
+    }
+  },
+  {
+    "code": "WEBD121",
+    "title": "Web Development Fundamentals",
+    "level": "as",
+    "areas": [
+      "web"
+    ],
+    "blurb": "HTML and CSS from the ground up — navigation, tables, forms, multimedia, and a first pass at JavaScript, ending in a three-page career site.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Forms",
+      "Multimedia"
+    ],
+    "demo": "demos/webd121-information-security/index.html"
+  },
+  {
+    "code": "ITCC121",
+    "title": "Introduction to Computer Science",
+    "level": "as",
+    "areas": [
+      "systems"
+    ],
+    "blurb": "Computing foundations: a software evaluation paper, a step-by-step PC setup guide, a database presentation, and SDLC waterfall work.",
+    "tags": [
+      "Hardware",
+      "SDLC",
+      "Databases"
+    ]
+  },
+  {
+    "code": "ITCC231",
+    "title": "Introduction to Information Technology Writing",
+    "level": "as",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Technical writing in APA form — outline, rough draft, midterm project, and a final paper, with weekly discussion work.",
+    "tags": [
+      "APA",
+      "Technical Writing",
+      "Research"
+    ]
+  },
+  {
+    "code": "ITCC298",
+    "title": "Computer Technology Intermediate Capstone",
+    "level": "as",
+    "areas": [
+      "systems"
+    ],
+    "blurb": "Associate's capstone: hardware requirements, a user manual, a presentation, a costing spreadsheet, and a final report.",
+    "tags": [
+      "Requirements",
+      "Documentation",
+      "Capstone"
+    ]
+  },
+  {
+    "code": "ITCC112",
+    "title": "Advanced Productivity Applications",
+    "level": "as",
+    "areas": [
+      "data",
+      "professional"
+    ],
+    "blurb": "Applied Excel — formatting, filtering, sorting, multi-sheet workbooks, freezing and views, page layout — with three graded workbook projects.",
+    "tags": [
+      "Excel",
+      "Filtering",
+      "Workbooks"
+    ]
+  },
+  {
+    "code": "ITMG221",
+    "title": "IT Project Management",
+    "level": "as",
+    "areas": [
+      "systems",
+      "professional"
+    ],
+    "blurb": "IT management through weekly case-study essays and structured review questions across eight weeks.",
+    "tags": [
+      "Case Studies",
+      "IT Management"
+    ]
+  },
+  {
+    "code": "MGMT100",
+    "title": "Human Relations",
+    "level": "as",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Interpersonal communication — a non-verbal communication essay, presentation preparation, and a final paper.",
+    "tags": [
+      "Communication",
+      "Presentation"
+    ]
+  },
+  {
+    "code": "STEM185",
+    "title": "The History and Context of STEM",
+    "level": "as",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Guided essay sequence with structured peer review, a timeline project, and a recorded video walkthrough.",
+    "tags": [
+      "Peer Review",
+      "Essays"
+    ]
+  },
+  {
+    "code": "STEM270",
+    "title": "Thinking and Acting Ethically",
+    "level": "as",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Applied ethics for technology: repeated case-study analyses and a code-of-ethics worksheet.",
+    "tags": [
+      "Ethics",
+      "Case Analysis"
+    ]
+  },
+  {
+    "code": "ENTD220",
+    "title": "Introduction to Python®",
+    "level": "bs",
+    "areas": [
+      "programming"
+    ],
+    "blurb": "The calculator rebuilt properly: dedicated functions, try/except handling, an imported Mylib module, a menu system, and finally classes with inheritance.",
+    "tags": [
+      "Python",
+      "Modules",
+      "OOP",
+      "Exceptions"
+    ]
+  },
+  {
+    "code": "ENTD268",
+    "title": "Information System Design",
+    "level": "bs",
+    "areas": [
+      "systems"
+    ],
+    "blurb": "Full analysis-and-design document set for one system — SRS with use cases, context and level-0 DFDs, UML, ERD, architecture, structure chart, and an SDD with test cases.",
+    "tags": [
+      "SRS",
+      "SDD",
+      "DFD",
+      "UML",
+      "ERD"
+    ]
+  },
+  {
+    "code": "ENTD120",
+    "title": "User Experience I",
+    "level": "bs",
+    "areas": [
+      "web",
+      "systems"
+    ],
+    "blurb": "UX research and design: an annotated bibliography, cognitive-mapping work, wireframes, and a final project paper.",
+    "tags": [
+      "UX",
+      "Wireframes",
+      "Research"
+    ]
+  },
+  {
+    "code": "WEBD221",
+    "title": "Intermediate Web Development",
+    "level": "bs",
+    "areas": [
+      "web"
+    ],
+    "blurb": "A multi-page site grown a week at a time — semantic markup, stylesheets, imagery, JavaScript behaviour, and a validated form. The final site demonstrates the accumulated techniques.",
+    "tags": [
+      "HTML5",
+      "CSS",
+      "JavaScript",
+      "Forms"
+    ],
+    "demo": "demos/webd221-evolution-of-video-games/index.html"
+  },
+  {
+    "code": "ISSC297",
+    "title": "Securing Applications",
+    "level": "bs",
+    "areas": [
+      "security"
+    ],
+    "blurb": "Ten hands-on application-security labs plus four case studies, worked against the OWASP testing guide and the CWE/SANS Top 25.",
+    "tags": [
+      "OWASP",
+      "AppSec",
+      "Labs"
+    ]
+  },
+  {
+    "code": "STEM470",
+    "title": "Cybersecurity, Surveillance, Privacy and Ethics",
+    "level": "bs",
+    "areas": [
+      "security",
+      "professional"
+    ],
+    "blurb": "Eight weeks on surveillance and privacy — facial recognition, predictive analytics, digital authoritarianism — ending in a case-study profile.",
+    "tags": [
+      "Privacy",
+      "Surveillance",
+      "Ethics"
+    ]
+  },
+  {
+    "code": "HRMT101",
+    "title": "Human Relations Communication",
+    "level": "bs",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Communication styles, change management, and global virtual teams, closing with a presentation.",
+    "tags": [
+      "Communication",
+      "Teams"
+    ],
+    "writeups": {
+      "slug": "hrmt101",
+      "count": 3
+    }
+  },
+  {
+    "code": "WEBD122",
+    "title": "Introduction to Web Analytics",
+    "level": "bs",
+    "areas": [
+      "data",
+      "web"
+    ],
+    "blurb": "Web data analysis — metrics selection, competitive intelligence, site critique methodology — delivered as weekly reports and two presentations.",
+    "tags": [
+      "Analytics",
+      "Metrics",
+      "Reporting"
+    ]
+  },
+  {
+    "code": "ISSC290",
+    "title": "Securing Databases",
+    "level": "bs",
+    "areas": [
+      "security",
+      "databases"
+    ],
+    "blurb": "Eight assignments on database hardening and access control, plus a researched paper taken from outline through draft to final.",
+    "tags": [
+      "Database Security",
+      "Access Control"
+    ]
+  },
+  {
+    "code": "ENTD320",
+    "title": "Intermediate Python® Programming",
+    "level": "bs",
+    "areas": [
+      "programming",
+      "web",
+      "databases"
+    ],
+    "blurb": "Flask from a hello-world route to two cooperating microservices over a shared SQLite database — with Jinja2 templates, a history page, and a unittest suite.",
+    "tags": [
+      "Flask",
+      "Jinja2",
+      "REST",
+      "SQLite",
+      "unittest"
+    ],
+    "writeups": {
+      "slug": "entd320",
+      "count": 1
+    }
+  },
+  {
+    "code": "INFO400",
+    "title": "MongoDB® and Python®",
+    "level": "bs",
+    "areas": [
+      "data",
+      "databases"
+    ],
+    "blurb": "The widest course in the degree: pandas and NumPy, REST and MongoDB, Cartopy mapping, Shapely geospatial dispatch, Apriori association rules, and scikit-learn — then a housing-price regression final.",
+    "tags": [
+      "pandas",
+      "MongoDB",
+      "scikit-learn",
+      "Apriori",
+      "Geospatial"
+    ],
+    "writeups": {
+      "slug": "info400",
+      "count": 8
+    }
+  },
+  {
+    "code": "INFO222",
+    "title": "Database Concepts",
+    "level": "bs",
+    "areas": [
+      "databases"
+    ],
+    "blurb": "Relational fundamentals worked in SQLite against a medical-records schema, with seven assignments and a walkthrough of the build.",
+    "tags": [
+      "SQL",
+      "SQLite",
+      "Schema Design"
+    ]
+  },
+  {
+    "code": "ISSC221",
+    "title": "Intermediate Computer Systems",
+    "level": "bs",
+    "areas": [
+      "systems"
+    ],
+    "blurb": "Twelve chapter write-ups on computer systems and architecture, consolidated into a final project.",
+    "tags": [
+      "Systems",
+      "Architecture"
+    ]
+  },
+  {
+    "code": "INFO331",
+    "title": "Management Information Systems",
+    "level": "bs",
+    "areas": [
+      "systems",
+      "professional"
+    ],
+    "blurb": "Information systems in a business context, delivered as two recorded presentations with supporting written analysis.",
+    "tags": [
+      "MIS",
+      "Presentations"
+    ]
+  },
+  {
+    "code": "STEM380",
+    "title": "Coevolution of Society, Culture, and Technology",
+    "level": "bs",
+    "areas": [
+      "professional"
+    ],
+    "blurb": "Two researched papers and a final essay on how technology and society shape one another.",
+    "tags": [
+      "Research",
+      "Technology & Society"
+    ],
+    "writeups": {
+      "slug": "stem380",
+      "count": 5
+    }
+  },
+  {
+    "code": "WEBD300",
+    "title": "User Interface Design",
+    "level": "bs",
+    "areas": [
+      "web"
+    ],
+    "blurb": "A template family — default, blog, and portfolio — delivered three times over with dedicated desktop, tablet, and mobile stylesheets.",
+    "tags": [
+      "UI Design",
+      "Responsive",
+      "Templates"
+    ],
+    "demo": "demos/webd300-ui-design/index.html"
+  },
+  {
+    "code": "WEBD241",
+    "title": "Web Development Using JavaScript®",
+    "level": "bs",
+    "areas": [
+      "web",
+      "programming"
+    ],
+    "blurb": "Seven JavaScript assignments — arrays and sorting, image galleries, form validation — collected behind a jQuery menu in the final project.",
+    "tags": [
+      "JavaScript",
+      "DOM",
+      "Validation",
+      "jQuery"
+    ],
+    "demo": "demos/webd241-javascript-final/FinalProject.html"
+  },
+  {
+    "code": "WEBD343",
+    "title": "jQuery",
+    "level": "bs",
+    "areas": [
+      "web"
+    ],
+    "blurb": "Four runnable jQuery builds ending in a reusable accordion plugin — selectors and events, an accordion, an image slider, then the plugin rewrite.",
+    "tags": [
+      "jQuery",
+      "Plugins",
+      "Animation"
+    ],
+    "demo": "demos/webd343-jquery/index.html"
+  },
+  {
+    "code": "INFO498",
+    "title": "Information Technology: Capstone",
+    "level": "bs",
+    "areas": [
+      "systems"
+    ],
+    "blurb": "A point-of-sale system specified end to end — network topology, screen layout, project schedule, and a costed build.",
+    "tags": [
+      "Capstone",
+      "Network Design",
+      "Planning",
+      "Costing"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python for Data Science: Week 7 Exercise — INFO400 — MongoDB® and Python®</title>
+<meta name="author" content="Sean Coggeshall">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="wrap nav">
+        <a class="brand" href="../index.html">Sean Coggeshall <span>/ IT</span></a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">All Write-Ups</a>
+            <a href="../coursework.html">Coursework</a>
+        </nav>
+    </div>
+</header>
+<main class="wrap doc"><p class="note">Sanitized coursework write-up. Results describe the submitted work and have not been independently reproduced.</p>
+    <p class="eyebrow">INFO400 — MongoDB® and Python® &middot; Week 7</p>
+    <h1>Python for Data Science: Week 7 Exercise</h1>
+    <h2>Exercise 19: Expanding the Example Set</h2>
+    <p>This exercise addressed class imbalance in a sentiment‐classification task using the “Amazon Product Reviews” dataset (Amazon product Reviews, 2021). We sampled 500 reviews per star rating (1–5) with replacement as needed, vectorized titles via Bag‑of‑Words, and trained a logistic regression model to predict ratings.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Class balance: Stratified sampling to give each rating equal representation (Vasiliev et al., 2022).</li>
+      <li>Text vectorization: Converting titles into numeric features with CountVectorizer.</li>
+      <li>Logistic regression: Supervised classification of discrete labels.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>The model reached 45 percent accuracy. Five‑star reviews had the highest recall (57 percent); mid‑range ratings (2–4) fell between 35 and 44 percent recall. The confusion matrix showed frequent misclassification among adjacent ratings, highlighting BoW + logistic regression limitations for nuanced text.</p>
+    <h3>Critique of AI</h3>
+    <p>Prompt used &quot; Generate Python code to balance an Amazon reviews dataset and train a logistic regression model using scikit‑learn. “</p>
+    <p>While the AI‐generated code outlined the workflow, it lacked error handling for missing text, cross‑validation, TF‑IDF exploration, and hyperparameter tuning.</p>
+    <h2>Exercise 20: Experimenting with Different Stocks and New Metrics</h2>
+    <p>This exercise extended stock‑trend classification by adding technical indicators and applying the model to various tickers. Using one year of daily data for AAPL and the S&amp;P 500, we engineered seven features—price and volume log‑returns, index returns, intraday volatility, 5‑day momentum, and 14‑day RSI—and trained a balanced logistic regression to predict next‑day movement (“Up,” “Down,” “Flat”).</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li>Time‑series feature engineering: Log‑returns, momentum, volatility, and RSI to capture market behavior (Vasiliev et al., 2022).</li>
+      <li>Multi‑class classification: Three‑way prediction of price movements.</li>
+      <li>Class weighting: Using class_weight=&#x27;balanced&#x27; to mitigate target imbalance.</li>
+    </ul>
+    <h3>Analysis of Results</h3>
+    <p>For AAPL, accuracy was 39.6 percent. The “Flat” class was poorly predicted, and “Up” versus “Down” often confused the model. This suggests linear models may underperform on noisy financial data and that richer features or more complex algorithms (e.g., treebased) are needed.</p>
+    <h3>Critique of AI</h3>
+    <p>“Generate Python code to predict next‑day stock movements using technical indicators and logistic regression with balanced classes.”</p>
+    <p>The AI solution enhanced the example by adding new indicators but omitted crossvalidation, hyperparameter tuning, model comparison, and featureimportance visualization.</p>
+    <p>References</p>
+    <p>Amazon product Reviews. (2021, July 11). https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews</p>
+    <p>pythondatabook. (n.d.). Sources [Code repository]. GitHub. Retrieved March 30, 2025, from Python for Data Science, supporting educational examples</p>
+    <p>Vasiliev, Y., Barbeau, B., &amp; McCart, J. (2022). Python for data science: A hands-on introduction. No Starch Press.</p>
+    <p>ChatGPT. (n.d.). https://chatgpt.com/c/67faa754-3488-800c-be16-e100e889abe5?model=o4-mini</p>
+    <p class="doc-back"><a href="index.html">&larr; All write-ups</a></p>
+</main>
+</body>
+</html>

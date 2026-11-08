@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern fan site exploring Ye's music, samples, tours, and creative process.">
+    <meta name="keywords" content="HTML, CSS, samples, music, Kanye West, Ye">
+    <meta name="author" content="Sean Coggeshall">
+    <title>WEBD121 — Web Development Fundamentals · Ye Music Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body><aside style="padding:12px;background:#eaf3f7;color:#172e3b;font:16px system-ui"><a href="../../index.html#demos">Portfolio</a> · WEBD121 — Web Development Fundamentals · Adapted coursework demo. Use fictional input.</aside>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">Ye Music Notes</a>
+            <div class="nav-links">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="about.html">About</a>
+                <a href="table.html">Creators</a>
+                <a href="form.html">Quiz</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-home">
+            <div class="hero-content">
+                <p class="eyebrow">Samples, stories, and standout moments</p>
+                <h1>Breaking down Ye's music</h1>
+                <p class="hero-copy">A cleaner look at the sounds, performances, and production choices that made the catalog feel larger than a playlist.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#sample-city">Explore the samples</a>
+                    <button class="button button-secondary" type="button" data-date-trigger>Show today's timestamp</button>
+                </div>
+                <p class="micro-copy" data-date-output aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="content-band intro-band">
+            <div class="section-layout">
+                <div>
+                    <p class="eyebrow">Overview</p>
+                    <h2>A career built on reinvention</h2>
+                </div>
+                <div class="prose">
+                    <p>Kanye West, now legally known as Ye, has had a career filled with major highs, public controversy, sharp pivots, and a sound that keeps changing shape. This site focuses on favorite musical moments: memorable verses, bold samples, and stories behind the records.</p>
+                    <p>The best parts of the catalog often come from contrast: soul records turned into arena-sized hooks, rough electronic textures next to choir vocals, and rap records that feel closer to short films than singles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-strip" aria-label="Featured topics">
+            <article>
+                <span>01</span>
+                <h3>Sample Hunting</h3>
+                <p>Tracing how older records are reshaped into new hooks, outros, and textures.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h3>Live Energy</h3>
+                <p>Looking at the stage design and performance choices that made tours feel cinematic.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h3>Production Stories</h3>
+                <p>Connecting the finished tracks to the decisions and collaborators behind them.</p>
+            </article>
+        </section>
+
+        <section class="content-band media-section" id="sample-city">
+            <div class="media-copy">
+                <p class="eyebrow">Sample City</p>
+                <h2>Old records, new pressure</h2>
+                <p>One of the most interesting parts of Ye's discography is his use of samples, from old soul music to modern electronic textures. Favorites include "Gyongyhaju lany" by Omega on "New Slaves", "Sermon (He'll Give Us What We Really Need)" by Holy Name of Mary Choral Family on "On Sight", and Otis Redding's "Try a Little Tenderness" on "Otis".</p>
+                <p>For more samples from Ye and other rap artists, visit the <a href="https://open.spotify.com/playlist/7kEFeRE1XGoPLxDdMtOYSm?si=RgxrvIaVRXOfbV8aQY-OGQ">Sample City playlist</a>.</p>
+            </div>
+            <figure class="image-panel">
+                <img src="saintpablotour.jpg" alt="Ye performing on the Saint Pablo Tour">
+                <figcaption>Saint Pablo Tour, TD Garden, 2016.</figcaption>
+            </figure>
+        </section>
+
+        <section class="content-band story-grid">
+            <article class="story-card">
+                <h2>New Slaves</h2>
+                <p>"New Slaves" uses an extended outro built around Gabor Presser's "Gyongyhaju lany", with Frank Ocean vocals layered into the ending. Presser later sued over the uncleared sample, and the dispute was settled outside court.</p>
+            </article>
+            <article class="story-card">
+                <h2>On Sight</h2>
+                <p>"On Sight" opens <span class="italictext">Yeezus</span> with an abrasive sound that immediately signals the album's frustration and stripped-down style. For more detail, check out <a href="https://www.whosampled.com/Kanye-West/On-Sight/">WhoSampled</a>.</p>
+            </article>
+            <article class="story-card">
+                <h2>Otis</h2>
+                <p>"Otis" turns Otis Redding's "Try a Little Tenderness" into a loud victory lap with Jay-Z. The video is just as oversized, centered on a Maybach transformed into a custom stunt car.</p>
+            </article>
+        </section>
+
+        <section class="content-band studio-callout">
+            <div class="studio-image">
+                <a href="https://www.netflix.com/title/81426972">
+                    <img src="Studio.jpg" alt="Ye working in the studio">
+                </a>
+            </div>
+            <div class="studio-copy">
+                <p class="eyebrow">Watch more</p>
+                <h2>Studio footage adds context</h2>
+                <p>Old studio footage can make the creative process feel less mysterious and more human. Click the image to visit Netflix and learn more about <span class="italictext">jeen-yuhs</span>.</p>
+                <a class="button button-primary" href="about.html">Read the fandom story</a>
+            </div>
+        </section>
+
+        <section class="content-band attribution-band">
+            <h2>Photo Attributions</h2>
+            <ul class="link-list">
+                <li><a href="https://commons.wikimedia.org/wiki/File:Jay-Z_at_a_Barack_Obama_rally.jpg">Jay-Z photo</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Kanye_West_in_the_Studio.jpg">Ye studio photo</a></li>
+                <li><a href="https://commons.wikimedia.org/wiki/File:Kanye_West_Saint_Pablo_Tour_TD_Garden_2016_5.jpg">Ye on stage</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Sean Coggeshall as a static HTML and CSS site.</p>
+    </footer>
+<script src="../demo-safety.js"></script></body>
+</html>

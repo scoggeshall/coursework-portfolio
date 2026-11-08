@@ -99,3 +99,15 @@ Intro-to-Python/ENTD220/scalc/
 # Superseded first attempt at the intro Python course; ENTD220 is the
 # completed version and the one shown on the site.
 Intro-to-Python/Associates/
+
+# Publication build and local verification
+/site/
+/.local/
+/node_modules/
+/docs/test-work/
+/docs/validation-result.json
+/archive/
+.env
+.env.*
+*.pem
+*.key

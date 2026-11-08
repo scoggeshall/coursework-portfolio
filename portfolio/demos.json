@@ -1,0 +1,44 @@
+[
+  {
+    "code": "WEBD221",
+    "course": "WEBD221 — Intermediate Web Development",
+    "name": "The Evolution of Video Games",
+    "note": "Four-page site — overview, console wars, favourites, and a validated submission form.",
+    "url": "demos/webd221-evolution-of-video-games/index.html"
+  },
+  {
+    "code": "WEBD241",
+    "course": "WEBD241 — Web Development Using JavaScript®",
+    "name": "JavaScript Final Project",
+    "note": "Seven assignments collected behind a jQuery drop-down menu.",
+    "url": "demos/webd241-javascript-final/FinalProject.html"
+  },
+  {
+    "code": "WEBD343",
+    "course": "WEBD343 — jQuery",
+    "name": "jQuery Interaction Set",
+    "note": "Jacksonville beaches accordion, built as a reusable jQuery plugin.",
+    "url": "demos/webd343-jquery/index.html"
+  },
+  {
+    "code": "WEBD300",
+    "course": "WEBD300 — User Interface Design",
+    "name": "Coggs Web Craft and Responsive Templates",
+    "note": "Coggs Web Craft landing page plus nine responsive template variants.",
+    "url": "demos/webd300-ui-design/index.html"
+  },
+  {
+    "code": "WEBD121",
+    "course": "WEBD121 — Web Development Fundamentals",
+    "name": "Information Security Analyst",
+    "note": "Three-page career site — the Associate's final web project.",
+    "url": "demos/webd121-information-security/index.html"
+  },
+  {
+    "code": "WEBD121",
+    "course": "WEBD121 — Web Development Fundamentals",
+    "name": "Ye Music Notes",
+    "note": "Five pages covering navigation, tables, forms, and multimedia.",
+    "url": "demos/webd121-music-notes/index.html"
+  }
+]

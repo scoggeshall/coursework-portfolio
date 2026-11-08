@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'">
+<meta charset="utf-8">
+<title>WEBD241 — Web Development Using JavaScript® · Assignment 7</title>
+<link rel="stylesheet" type="text/css" href="Assignment7.css">
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body><aside style="padding:12px;background:#eaf3f7;color:#172e3b;font:16px system-ui"><a href="../../index.html#demos">Portfolio</a> · WEBD241 — Web Development Using JavaScript® · Adapted coursework demo. Use fictional input.</aside>
+<h1>Sean Coggeshall</h1>
+
+<ul id="menu">
+	<li><a href="FinalProject.html">Home</a>
+		<ul>
+			<li><a href="FinalProject.html">Home</a></li>
+		</ul>
+	</li>
+	<li><a href="Assignment1.html">Assignment 1</a>
+		<ul>
+			<li><a href="Assignment1.html">Assignment 1</a></li>
+		</ul>
+	</li>
+	<li><a href="Assignment2.html">Assignment 2</a>
+		<ul>
+			<li><a href="Assignment2.html">Assignment 2</a></li>
+		</ul>
+	</li>
+	<li><a href="Assignment3.html">Assignment 3</a>
+		<ul>
+			<li><a href="Assignment3.html">Assignment 3</a></li>
+		</ul>
+	<li><a href="Assignment4.html">Assignment 4</a>
+		<ul>
+			<li><a href="Assignment4.html">Assignment 4</a></li>
+		</ul>
+	<li><a href="Assignment5.html">Assignment 5</a>
+		<ul>
+			<li><a href="Assignment5.html">Assignment 5</a></li>
+		</ul>
+	<li><a href="Assignment6.html">Assignment 6</a>
+		<ul>
+			<li><a href="Assignment6.html">Assignment 6</a></li>
+		</ul>
+	<li><a href="Assignment7.html">Assignment 7</a>
+		<ul>
+			<li><a href="Assignment7.html">Assignment 7</a></li>
+		</ul>
+	</li>
+</ul>
+
+<main style="padding:2rem"><h1>Color preference demonstration</h1><p>Choose a background color for this page. Your selection stays in this page only.</p><label>Background <input type="color" id="color-choice" value="#ffffff"></label><p id="color-result" role="status"></p></main><script>document.getElementById('color-choice').addEventListener('input', function () { document.body.style.backgroundColor=this.value; document.getElementById('color-result').textContent='Selected color: '+this.value; });</script>
+
+
+<script src="../demo-safety.js"></script></body>
+</html>
